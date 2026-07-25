@@ -9,7 +9,7 @@ blacksmith bench keeps 200 Star Metal for repairs, etc. — and never hand-sort 
 again. It's designed to be compatible with other crafting-table mods, because all the
 rules live on the Desk itself, not on the benches it tidies.
 
-A companion notebook placeable, found beside the Desk, grants the Feat that unlocks it —
+A companion notebook placeable grants the Feat that unlocks it —
 read it once and Amadan's Desk becomes craftable.
 
 ## Current status
