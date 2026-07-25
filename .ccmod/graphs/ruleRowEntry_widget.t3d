@@ -1,0 +1,33 @@
+Begin Object Class=/Script/UMG.HorizontalBox Name="RuleRowRoot" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_RuleRowEntry.W_RuleRowEntry:WidgetTree.RuleRowRoot'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRowRootSlot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_RuleRowEntry.W_RuleRowEntry:WidgetTree.RuleRowRoot.RuleRowRootSlot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRowRootSlot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_RuleRowEntry.W_RuleRowEntry:WidgetTree.RuleRowRoot.RuleRowRootSlot_1'"
+   End Object
+   Begin Object Name="RuleRowRootSlot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_RuleRowEntry.W_RuleRowEntry:WidgetTree.RuleRowRoot.RuleRowRootSlot_0'"
+      Parent="/Script/UMG.HorizontalBox'RuleRowRoot'"
+      Content="/Script/UMG.TextBlock'RuleText'"
+   End Object
+   Begin Object Name="RuleRowRootSlot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_RuleRowEntry.W_RuleRowEntry:WidgetTree.RuleRowRoot.RuleRowRootSlot_1'"
+      Parent="/Script/UMG.HorizontalBox'RuleRowRoot'"
+      Content="/Script/UMG.Button'DeleteButton'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'RuleRowRootSlot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'RuleRowRootSlot_1'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleText" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_RuleRowEntry.W_RuleRowEntry:WidgetTree.RuleText'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "")
+End Object
+Begin Object Class=/Script/UMG.Button Name="DeleteButton" ExportPath="/Script/UMG.Button'/Game/Mods/Menu/W_RuleRowEntry.W_RuleRowEntry:WidgetTree.DeleteButton'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="DeleteButtonSlot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_RuleRowEntry.W_RuleRowEntry:WidgetTree.DeleteButton.DeleteButtonSlot_0'"
+   End Object
+   Begin Object Name="DeleteButtonSlot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_RuleRowEntry.W_RuleRowEntry:WidgetTree.DeleteButton.DeleteButtonSlot_0'"
+      Parent="/Script/UMG.Button'DeleteButton'"
+      Content="/Script/UMG.TextBlock'DeleteButtonText'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'DeleteButtonSlot_0'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="DeleteButtonText" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_RuleRowEntry.W_RuleRowEntry:WidgetTree.DeleteButtonText'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "X")
+End Object

@@ -1,0 +1,331 @@
+Begin Object Class=/Script/UMG.VerticalBox Name="RulesListBox" ExportPath="/Script/UMG.VerticalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox'"
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RulesListBoxSlot_0" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RulesListBoxSlot_1" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_1'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RulesListBoxSlot_2" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_2'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RulesListBoxSlot_3" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_3'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RulesListBoxSlot_4" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_4'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RulesListBoxSlot_5" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_5'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RulesListBoxSlot_6" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_6'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RulesListBoxSlot_7" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_7'"
+   End Object
+   Begin Object Name="RulesListBoxSlot_0" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_0'"
+      Parent="/Script/UMG.VerticalBox'RulesListBox'"
+      Content="/Script/UMG.HorizontalBox'RuleRow_0'"
+   End Object
+   Begin Object Name="RulesListBoxSlot_1" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_1'"
+      Parent="/Script/UMG.VerticalBox'RulesListBox'"
+      Content="/Script/UMG.HorizontalBox'RuleRow_1'"
+   End Object
+   Begin Object Name="RulesListBoxSlot_2" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_2'"
+      Parent="/Script/UMG.VerticalBox'RulesListBox'"
+      Content="/Script/UMG.HorizontalBox'RuleRow_2'"
+   End Object
+   Begin Object Name="RulesListBoxSlot_3" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_3'"
+      Parent="/Script/UMG.VerticalBox'RulesListBox'"
+      Content="/Script/UMG.HorizontalBox'RuleRow_3'"
+   End Object
+   Begin Object Name="RulesListBoxSlot_4" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_4'"
+      Parent="/Script/UMG.VerticalBox'RulesListBox'"
+      Content="/Script/UMG.HorizontalBox'RuleRow_4'"
+   End Object
+   Begin Object Name="RulesListBoxSlot_5" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_5'"
+      Parent="/Script/UMG.VerticalBox'RulesListBox'"
+      Content="/Script/UMG.HorizontalBox'RuleRow_5'"
+   End Object
+   Begin Object Name="RulesListBoxSlot_6" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_6'"
+      Parent="/Script/UMG.VerticalBox'RulesListBox'"
+      Content="/Script/UMG.HorizontalBox'RuleRow_6'"
+   End Object
+   Begin Object Name="RulesListBoxSlot_7" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RulesListBox.RulesListBoxSlot_7'"
+      Parent="/Script/UMG.VerticalBox'RulesListBox'"
+      Content="/Script/UMG.HorizontalBox'RuleRow_7'"
+   End Object
+   Slots(0)="/Script/UMG.VerticalBoxSlot'RulesListBoxSlot_0'"
+   Slots(1)="/Script/UMG.VerticalBoxSlot'RulesListBoxSlot_1'"
+   Slots(2)="/Script/UMG.VerticalBoxSlot'RulesListBoxSlot_2'"
+   Slots(3)="/Script/UMG.VerticalBoxSlot'RulesListBoxSlot_3'"
+   Slots(4)="/Script/UMG.VerticalBoxSlot'RulesListBoxSlot_4'"
+   Slots(5)="/Script/UMG.VerticalBoxSlot'RulesListBoxSlot_5'"
+   Slots(6)="/Script/UMG.VerticalBoxSlot'RulesListBoxSlot_6'"
+   Slots(7)="/Script/UMG.VerticalBoxSlot'RulesListBoxSlot_7'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.Button Name="RuleRowDelete_0" ExportPath="/Script/UMG.Button'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_0'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="RuleRowDelete_0Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_0.RuleRowDelete_0Slot_0'"
+   End Object
+   Begin Object Name="RuleRowDelete_0Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_0.RuleRowDelete_0Slot_0'"
+      Parent="/Script/UMG.Button'RuleRowDelete_0'"
+      Content="/Script/UMG.TextBlock'RuleRowDeleteText_0'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'RuleRowDelete_0Slot_0'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowDeleteText_0" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDeleteText_0'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "X")
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowText_0" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowText_0'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "")
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="RuleRow_0" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_0'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_0Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_0.RuleRow_0Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_0Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_0.RuleRow_0Slot_1'"
+   End Object
+   Begin Object Name="RuleRow_0Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_0.RuleRow_0Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_0'"
+      Content="/Script/UMG.TextBlock'RuleRowText_0'"
+   End Object
+   Begin Object Name="RuleRow_0Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_0.RuleRow_0Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_0'"
+      Content="/Script/UMG.Button'RuleRowDelete_0'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'RuleRow_0Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'RuleRow_0Slot_1'"
+   Visibility=Collapsed
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.Button Name="RuleRowDelete_1" ExportPath="/Script/UMG.Button'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_1'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="RuleRowDelete_1Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_1.RuleRowDelete_1Slot_0'"
+   End Object
+   Begin Object Name="RuleRowDelete_1Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_1.RuleRowDelete_1Slot_0'"
+      Parent="/Script/UMG.Button'RuleRowDelete_1'"
+      Content="/Script/UMG.TextBlock'RuleRowDeleteText_1'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'RuleRowDelete_1Slot_0'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowDeleteText_1" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDeleteText_1'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "X")
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowText_1" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowText_1'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "")
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="RuleRow_1" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_1'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_1Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_1.RuleRow_1Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_1Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_1.RuleRow_1Slot_1'"
+   End Object
+   Begin Object Name="RuleRow_1Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_1.RuleRow_1Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_1'"
+      Content="/Script/UMG.TextBlock'RuleRowText_1'"
+   End Object
+   Begin Object Name="RuleRow_1Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_1.RuleRow_1Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_1'"
+      Content="/Script/UMG.Button'RuleRowDelete_1'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'RuleRow_1Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'RuleRow_1Slot_1'"
+   Visibility=Collapsed
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.Button Name="RuleRowDelete_2" ExportPath="/Script/UMG.Button'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_2'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="RuleRowDelete_2Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_2.RuleRowDelete_2Slot_0'"
+   End Object
+   Begin Object Name="RuleRowDelete_2Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_2.RuleRowDelete_2Slot_0'"
+      Parent="/Script/UMG.Button'RuleRowDelete_2'"
+      Content="/Script/UMG.TextBlock'RuleRowDeleteText_2'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'RuleRowDelete_2Slot_0'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowDeleteText_2" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDeleteText_2'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "X")
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowText_2" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowText_2'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "")
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="RuleRow_2" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_2'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_2Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_2.RuleRow_2Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_2Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_2.RuleRow_2Slot_1'"
+   End Object
+   Begin Object Name="RuleRow_2Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_2.RuleRow_2Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_2'"
+      Content="/Script/UMG.TextBlock'RuleRowText_2'"
+   End Object
+   Begin Object Name="RuleRow_2Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_2.RuleRow_2Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_2'"
+      Content="/Script/UMG.Button'RuleRowDelete_2'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'RuleRow_2Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'RuleRow_2Slot_1'"
+   Visibility=Collapsed
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.Button Name="RuleRowDelete_3" ExportPath="/Script/UMG.Button'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_3'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="RuleRowDelete_3Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_3.RuleRowDelete_3Slot_0'"
+   End Object
+   Begin Object Name="RuleRowDelete_3Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_3.RuleRowDelete_3Slot_0'"
+      Parent="/Script/UMG.Button'RuleRowDelete_3'"
+      Content="/Script/UMG.TextBlock'RuleRowDeleteText_3'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'RuleRowDelete_3Slot_0'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowDeleteText_3" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDeleteText_3'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "X")
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowText_3" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowText_3'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "")
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="RuleRow_3" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_3'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_3Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_3.RuleRow_3Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_3Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_3.RuleRow_3Slot_1'"
+   End Object
+   Begin Object Name="RuleRow_3Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_3.RuleRow_3Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_3'"
+      Content="/Script/UMG.TextBlock'RuleRowText_3'"
+   End Object
+   Begin Object Name="RuleRow_3Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_3.RuleRow_3Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_3'"
+      Content="/Script/UMG.Button'RuleRowDelete_3'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'RuleRow_3Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'RuleRow_3Slot_1'"
+   Visibility=Collapsed
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.Button Name="RuleRowDelete_4" ExportPath="/Script/UMG.Button'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_4'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="RuleRowDelete_4Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_4.RuleRowDelete_4Slot_0'"
+   End Object
+   Begin Object Name="RuleRowDelete_4Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_4.RuleRowDelete_4Slot_0'"
+      Parent="/Script/UMG.Button'RuleRowDelete_4'"
+      Content="/Script/UMG.TextBlock'RuleRowDeleteText_4'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'RuleRowDelete_4Slot_0'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowDeleteText_4" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDeleteText_4'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "X")
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowText_4" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowText_4'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "")
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="RuleRow_4" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_4'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_4Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_4.RuleRow_4Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_4Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_4.RuleRow_4Slot_1'"
+   End Object
+   Begin Object Name="RuleRow_4Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_4.RuleRow_4Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_4'"
+      Content="/Script/UMG.TextBlock'RuleRowText_4'"
+   End Object
+   Begin Object Name="RuleRow_4Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_4.RuleRow_4Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_4'"
+      Content="/Script/UMG.Button'RuleRowDelete_4'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'RuleRow_4Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'RuleRow_4Slot_1'"
+   Visibility=Collapsed
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.Button Name="RuleRowDelete_5" ExportPath="/Script/UMG.Button'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_5'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="RuleRowDelete_5Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_5.RuleRowDelete_5Slot_0'"
+   End Object
+   Begin Object Name="RuleRowDelete_5Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_5.RuleRowDelete_5Slot_0'"
+      Parent="/Script/UMG.Button'RuleRowDelete_5'"
+      Content="/Script/UMG.TextBlock'RuleRowDeleteText_5'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'RuleRowDelete_5Slot_0'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowDeleteText_5" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDeleteText_5'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "X")
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowText_5" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowText_5'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "")
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="RuleRow_5" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_5'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_5Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_5.RuleRow_5Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_5Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_5.RuleRow_5Slot_1'"
+   End Object
+   Begin Object Name="RuleRow_5Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_5.RuleRow_5Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_5'"
+      Content="/Script/UMG.TextBlock'RuleRowText_5'"
+   End Object
+   Begin Object Name="RuleRow_5Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_5.RuleRow_5Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_5'"
+      Content="/Script/UMG.Button'RuleRowDelete_5'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'RuleRow_5Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'RuleRow_5Slot_1'"
+   Visibility=Collapsed
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.Button Name="RuleRowDelete_6" ExportPath="/Script/UMG.Button'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_6'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="RuleRowDelete_6Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_6.RuleRowDelete_6Slot_0'"
+   End Object
+   Begin Object Name="RuleRowDelete_6Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_6.RuleRowDelete_6Slot_0'"
+      Parent="/Script/UMG.Button'RuleRowDelete_6'"
+      Content="/Script/UMG.TextBlock'RuleRowDeleteText_6'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'RuleRowDelete_6Slot_0'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowDeleteText_6" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDeleteText_6'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "X")
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowText_6" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowText_6'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "")
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="RuleRow_6" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_6'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_6Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_6.RuleRow_6Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_6Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_6.RuleRow_6Slot_1'"
+   End Object
+   Begin Object Name="RuleRow_6Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_6.RuleRow_6Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_6'"
+      Content="/Script/UMG.TextBlock'RuleRowText_6'"
+   End Object
+   Begin Object Name="RuleRow_6Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_6.RuleRow_6Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_6'"
+      Content="/Script/UMG.Button'RuleRowDelete_6'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'RuleRow_6Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'RuleRow_6Slot_1'"
+   Visibility=Collapsed
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.Button Name="RuleRowDelete_7" ExportPath="/Script/UMG.Button'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_7'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="RuleRowDelete_7Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_7.RuleRowDelete_7Slot_0'"
+   End Object
+   Begin Object Name="RuleRowDelete_7Slot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDelete_7.RuleRowDelete_7Slot_0'"
+      Parent="/Script/UMG.Button'RuleRowDelete_7'"
+      Content="/Script/UMG.TextBlock'RuleRowDeleteText_7'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'RuleRowDelete_7Slot_0'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowDeleteText_7" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowDeleteText_7'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "X")
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="RuleRowText_7" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRowText_7'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "")
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="RuleRow_7" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_7'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_7Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_7.RuleRow_7Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="RuleRow_7Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_7.RuleRow_7Slot_1'"
+   End Object
+   Begin Object Name="RuleRow_7Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_7.RuleRow_7Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_7'"
+      Content="/Script/UMG.TextBlock'RuleRowText_7'"
+   End Object
+   Begin Object Name="RuleRow_7Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.RuleRow_7.RuleRow_7Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'RuleRow_7'"
+      Content="/Script/UMG.Button'RuleRowDelete_7'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'RuleRow_7Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'RuleRow_7Slot_1'"
+   Visibility=Collapsed
+   bExpandedInDesigner=True
+End Object

@@ -1,0 +1,7 @@
+# OS cruft
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ccmod workspace cache (rebuildable, not source of truth)
+.ccmod/cache.sqlite

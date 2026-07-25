@@ -1,0 +1,22 @@
+Begin Object Class=/Script/UMG.HorizontalBox Name="HorizontalBox_70" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_70'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="HorizontalBox_70Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_70.HorizontalBox_70Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="HorizontalBox_70Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_70.HorizontalBox_70Slot_1'"
+   End Object
+   Begin Object Name="HorizontalBox_70Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_70.HorizontalBox_70Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'HorizontalBox_70'"
+      Content="/Script/UMG.TextBlock'TextBlock_190'"
+   End Object
+   Begin Object Name="HorizontalBox_70Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_70.HorizontalBox_70Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'HorizontalBox_70'"
+      Content="/Script/UMG.ComboBoxString'ItemDropdown'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'HorizontalBox_70Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'HorizontalBox_70Slot_1'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="TextBlock_190" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.TextBlock_190'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "Item:")
+End Object
+Begin Object Class=/Script/UMG.ComboBoxString Name="ItemDropdown" ExportPath="/Script/UMG.ComboBoxString'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.ItemDropdown'"
+End Object

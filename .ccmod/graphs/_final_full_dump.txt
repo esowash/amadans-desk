@@ -1,0 +1,468 @@
+=== K2Node_Event_3 (K2Node_Event) EventReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.UserWidget'",MemberName="Construct")
+    OutputDelegate       "delegate" links=[] 
+    then                 "exec"     links=['K2Node_ExecutionSequence_0.execute'] 
+=== K2Node_CallFunction_11 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.GameplayStatics'",MemberName="GetAll
+    execute              "exec"     links=['K2Node_ExecutionSequence_0.then_0'] 
+    then                 "exec"     links=['K2Node_CallFunction_GDTRN.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__GameplayStatics"
+    WorldContextObject   "object"   links=[] 
+    ActorClass           "class"    links=[] "/Game/Mods/Menu/Menu_ModController.Menu_ModController_C"
+    OutActors            "object"   links=['K2Node_GetArrayItem_3.Array'] 
+=== K2Node_GetArrayItem_3 (K2Node_GetArrayItem) 
+    Array                "object"   links=['K2Node_CallFunction_11.OutActors'] 
+    Dimension 1          "int"      links=[] "0"
+    Output               "object"   links=['K2Node_CallFunction_0.self'] 
+=== K2Node_CallFunction_45 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.GameplayStatics'",MemberName="GetAll
+    execute              "exec"     links=['K2Node_ExecutionSequence_0.then_1'] 
+    then                 "exec"     links=['K2Node_CallFunction_0.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__GameplayStatics"
+    WorldContextObject   "object"   links=[] 
+    ActorClass           "class"    links=[] "/Game/Mods/Menu/BP_PL_Table_Strategy_Amadan.BP_PL_Table_Strategy_Amadan_C"
+    OutActors            "object"   links=['K2Node_GetArrayItem_6.Array'] 
+=== K2Node_GetArrayItem_6 (K2Node_GetArrayItem) 
+    Array                "object"   links=['K2Node_CallFunction_45.OutActors'] 
+    Dimension 1          "int"      links=[] "0"
+    Output               "object"   links=['K2Node_CallFunction_0.AnchorActor'] 
+=== K2Node_CallFunction_0 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Menu/Menu_ModController.Men
+    execute              "exec"     links=['K2Node_CallFunction_45.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_17.execute'] 
+    self                 "object"   links=['K2Node_GetArrayItem_3.Output'] 
+    AnchorActor          "object"   links=['K2Node_GetArrayItem_6.Output'] 
+    Range                "real"     links=[] "3000.0"
+    ReturnValue          "object"   links=[] 
+=== K2Node_ExecutionSequence_0 (K2Node_ExecutionSequence) 
+    execute              "exec"     links=['K2Node_Event_3.then'] 
+    then_0               "exec"     links=['K2Node_CallFunction_11.execute'] 
+    then_1               "exec"     links=['K2Node_CallFunction_45.execute'] 
+=== K2Node_CallFunction_17 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.GameplayStatics'",MemberName="GetAll
+    execute              "exec"     links=['K2Node_CallFunction_0.then'] 
+    then                 "exec"     links=['K2Node_MacroInstance_2.Exec'] 
+    self                 "object"   links=[] "/Script/Engine.Default__GameplayStatics"
+    WorldContextObject   "object"   links=[] 
+    ActorClass           "class"    links=[] "/Game/Mods/Menu/Menu_ModController.Menu_ModController_C"
+    OutActors            "object"   links=['K2Node_GetArrayItem_5.Array'] 
+=== K2Node_GetArrayItem_5 (K2Node_GetArrayItem) 
+    Array                "object"   links=['K2Node_CallFunction_17.OutActors'] 
+    Dimension 1          "int"      links=[] "0"
+    Output               "object"   links=['K2Node_VariableGet_9.self'] 
+=== K2Node_VariableGet_9 (K2Node_VariableGet) VariableReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Menu/Menu_ModController.Men
+    ManagedStations      "object"   links=['K2Node_MacroInstance_2.Array'] 
+    self                 "object"   links=['K2Node_GetArrayItem_5.Output'] 
+=== K2Node_MacroInstance_2 (K2Node_MacroInstance) MacroGraphReference=(MacroGraph="/Script/Engine.EdGraph'/Engine/EditorBlueprintResources/StandardMacros.Standa
+    Exec                 "exec"     links=['K2Node_CallFunction_17.then'] 
+    Array                "object"   links=['K2Node_VariableGet_9.ManagedStations'] 
+    LoopBody             "exec"     links=['K2Node_CallFunction_23.execute'] 
+    Array Element        "object"   links=['K2Node_CallFunction_44.Object'] 
+    Array Index          "int"      links=[] 
+    Completed            "exec"     links=[] 
+=== K2Node_CallFunction_44 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Ge
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    Object               "object"   links=['K2Node_MacroInstance_2.Array Element'] 
+    ReturnValue          "string"   links=['K2Node_CallFunction_23.Option'] 
+=== K2Node_VariableGet_10 (K2Node_VariableGet) VariableReference=(MemberName="BenchDropdown",MemberGuid=4BB2E4504FBAA8DA9C99909E2F2FEDCF,bSelfContext=True)
+    BenchDropdown        "object"   links=['K2Node_CallFunction_23.self'] 
+    self                 "object"   links=[] 
+=== K2Node_CallFunction_23 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.ComboBoxString'",MemberName="AddOption"
+    execute              "exec"     links=['K2Node_MacroInstance_2.LoopBody'] 
+    then                 "exec"     links=[] 
+    self                 "object"   links=['K2Node_VariableGet_10.BenchDropdown'] 
+    Option               "string"   links=['K2Node_CallFunction_44.ReturnValue'] 
+=== K2Node_ComponentBoundEvent_3 (K2Node_ComponentBoundEvent) EventReference=(MemberParent="/Script/CoreUObject.Package'/Script/UMG'",MemberName="OnButtonClickedEvent__Dele
+    OutputDelegate       "delegate" links=[] 
+    then                 "exec"     links=['K2Node_CallFunction_215.execute'] 
+=== K2Node_CallFunction_Close (K2Node_CallFunction) FunctionReference=(MemberName="Close",bSelfContext=True)
+    execute              "exec"     links=['K2Node_CallFunction_234.then'] 
+    then                 "exec"     links=[] 
+    self                 "object"   links=[] 
+    force                "bool"     links=[] "false"
+=== K2Node_ComponentBoundEvent_5 (K2Node_ComponentBoundEvent) EventReference=(MemberParent="/Script/CoreUObject.Package'/Script/UMG'",MemberName="OnButtonClickedEvent__Dele
+    OutputDelegate       "delegate" links=[] 
+    then                 "exec"     links=['K2Node_CallFunction_6.execute'] 
+=== K2Node_CallFunction_GDTRN (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.DataTableFunctionLibrary'",MemberNam
+    execute              "exec"     links=['K2Node_CallFunction_11.then'] 
+    then                 "exec"     links=['K2Node_MacroInstance_0.Exec'] 
+    self                 "object"   links=[] "/Script/Engine.Default__DataTableFunctionLibrary"
+    Table                "object"   links=[] "/Game/Items/ItemTable.ItemTable"
+    OutRowNames          "name"     links=['K2Node_MacroInstance_0.Array'] 
+=== K2Node_MacroInstance_0 (K2Node_MacroInstance) MacroGraphReference=(MacroGraph="/Script/Engine.EdGraph'/Engine/EditorBlueprintResources/StandardMacros.Standa
+    Exec                 "exec"     links=['K2Node_CallFunction_GDTRN.then'] 
+    Array                "name"     links=['K2Node_CallFunction_GDTRN.OutRowNames'] 
+    LoopBody             "exec"     links=['K2Node_CallFunction_GNFT.execute'] 
+    Array Element        "name"     links=['K2Node_CallFunction_118.InName'] 
+    Array Index          "int"      links=[] 
+    Completed            "exec"     links=[] 
+=== K2Node_CallFunction_118 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetStringLibrary'",MemberName="Co
+    self                 "object"   links=[] "/Script/Engine.Default__KismetStringLibrary"
+    InName               "name"     links=['K2Node_MacroInstance_0.Array Element'] "None"
+    ReturnValue          "string"   links=['K2Node_CallFunction_120.InString'] 
+=== K2Node_CallFunction_120 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetStringLibrary'",MemberName="Co
+    self                 "object"   links=[] "/Script/Engine.Default__KismetStringLibrary"
+    InString             "string"   links=['K2Node_CallFunction_118.ReturnValue'] 
+    ReturnValue          "int"      links=['K2Node_CallFunction_GNFT.templateID', 'K2Node_CallArrayFunction_2.NewItem'] "0"
+=== K2Node_CallFunction_GNFT (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Characters/SurvivalFunctionLibra
+    execute              "exec"     links=['K2Node_MacroInstance_0.LoopBody'] 
+    then                 "exec"     links=['K2Node_CallFunction_123.execute'] 
+    self                 "object"   links=[] "/Game/Characters/SurvivalFunctionLibrary.Default__SurvivalFunctionLibrary_C"
+    templateID           "int"      links=['K2Node_CallFunction_120.ReturnValue'] "0"
+    __WorldContext       "object"   links=[] 
+    Name                 "text"     links=['K2Node_CallFunction_119.InText'] 
+=== K2Node_CallFunction_119 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetTextLibrary'",MemberName="Conv
+    self                 "object"   links=[] "/Script/Engine.Default__KismetTextLibrary"
+    InText               "text"     links=['K2Node_CallFunction_GNFT.Name'] 
+    ReturnValue          "string"   links=['K2Node_CallFunction_123.Option'] 
+=== K2Node_CallFunction_123 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.ComboBoxString'",MemberName="AddOption"
+    execute              "exec"     links=['K2Node_CallFunction_GNFT.then'] 
+    then                 "exec"     links=['K2Node_CallArrayFunction_2.execute'] 
+    self                 "object"   links=['K2Node_VariableGet_43.ItemDropdown'] 
+    Option               "string"   links=['K2Node_CallFunction_119.ReturnValue'] 
+=== K2Node_VariableGet_43 (K2Node_VariableGet) VariableReference=(MemberName="ItemDropdown",MemberGuid=8248B9604C275EA4C8D83F89DF3A2ADC,bSelfContext=True)
+    ItemDropdown         "object"   links=['K2Node_CallFunction_123.self'] 
+    self                 "object"   links=[] 
+=== K2Node_VariableGet_42 (K2Node_VariableGet) VariableReference=(MemberName="ItemTemplateIDs",MemberGuid=239C718845955110A90AD9B88028542F,bSelfContext=True)
+    ItemTemplateIDs      "int"      links=['K2Node_CallArrayFunction_2.TargetArray'] 
+    self                 "object"   links=[] 
+=== K2Node_CallArrayFunction_2 (K2Node_CallArrayFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetArrayLibrary'",MemberName="Arr
+    execute              "exec"     links=['K2Node_CallFunction_123.then'] 
+    then                 "exec"     links=[] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetArrayLibrary"
+    TargetArray          "int"      links=['K2Node_VariableGet_42.ItemTemplateIDs'] 
+    NewItem              "int"      links=['K2Node_CallFunction_120.ReturnValue'] 
+    ReturnValue          "int"      links=[] "0"
+=== K2Node_CallFunction_215 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.GameplayStatics'",MemberName="GetAll
+    execute              "exec"     links=['K2Node_ComponentBoundEvent_3.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_226.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__GameplayStatics"
+    WorldContextObject   "object"   links=[] 
+    ActorClass           "class"    links=[] "/Game/Mods/Menu/Menu_ModController.Menu_ModController_C"
+    OutActors            "object"   links=['K2Node_GetArrayItem_30.Array'] 
+=== K2Node_GetArrayItem_30 (K2Node_GetArrayItem) 
+    Array                "object"   links=['K2Node_CallFunction_215.OutActors'] 
+    Dimension 1          "int"      links=[] "0"
+    Output               "object"   links=['K2Node_VariableGet_72.self', 'K2Node_CallFunction_234.self'] 
+=== K2Node_VariableGet_72 (K2Node_VariableGet) VariableReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Menu/Menu_ModController.Men
+    ManagedStations      "object"   links=['K2Node_GetArrayItem_31.Array'] 
+    self                 "object"   links=['K2Node_GetArrayItem_30.Output'] 
+=== K2Node_VariableGet_73 (K2Node_VariableGet) VariableReference=(MemberName="BenchDropdown",MemberGuid=4BB2E4504FBAA8DA9C99909E2F2FEDCF,bSelfContext=True)
+    BenchDropdown        "object"   links=['K2Node_CallFunction_216.self'] 
+    self                 "object"   links=[] 
+=== K2Node_CallFunction_216 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.ComboBoxString'",MemberName="GetSelecte
+    self                 "object"   links=['K2Node_VariableGet_73.BenchDropdown'] 
+    ReturnValue          "int"      links=['K2Node_GetArrayItem_31.Dimension 1'] "0"
+=== K2Node_GetArrayItem_31 (K2Node_GetArrayItem) 
+    Array                "object"   links=['K2Node_VariableGet_72.ManagedStations'] 
+    Dimension 1          "int"      links=['K2Node_CallFunction_216.ReturnValue'] "0"
+    Output               "object"   links=['K2Node_CallFunction_222.Object', 'K2Node_CallFunction_234.Station'] 
+=== K2Node_VariableGet_74 (K2Node_VariableGet) VariableReference=(MemberName="ItemDropdown",MemberGuid=8248B9604C275EA4C8D83F89DF3A2ADC,bSelfContext=True)
+    ItemDropdown         "object"   links=['K2Node_CallFunction_217.self'] 
+    self                 "object"   links=[] 
+=== K2Node_CallFunction_217 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.ComboBoxString'",MemberName="GetSelecte
+    self                 "object"   links=['K2Node_VariableGet_74.ItemDropdown'] 
+    ReturnValue          "int"      links=['K2Node_GetArrayItem_32.Dimension 1'] "0"
+=== K2Node_VariableGet_75 (K2Node_VariableGet) VariableReference=(MemberName="ItemTemplateIDs",MemberGuid=239C718845955110A90AD9B88028542F,bSelfContext=True)
+    ItemTemplateIDs      "int"      links=['K2Node_GetArrayItem_32.Array'] 
+    self                 "object"   links=[] 
+=== K2Node_GetArrayItem_32 (K2Node_GetArrayItem) 
+    Array                "int"      links=['K2Node_VariableGet_75.ItemTemplateIDs'] 
+    Dimension 1          "int"      links=['K2Node_CallFunction_217.ReturnValue'] "0"
+    Output               "int"      links=['K2Node_CallFunction_223.InInt', 'K2Node_CallFunction_234.TemplateID'] 
+=== K2Node_VariableGet_76 (K2Node_VariableGet) VariableReference=(MemberName="KeepInput",MemberGuid=0576B4C241B7D9447A9466B9A84A9D0A,bSelfContext=True)
+    KeepInput            "object"   links=['K2Node_CallFunction_218.self'] 
+    self                 "object"   links=[] 
+=== K2Node_CallFunction_218 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.EditableTextBox'",MemberName="GetText")
+    self                 "object"   links=['K2Node_VariableGet_76.KeepInput'] 
+    ReturnValue          "text"     links=['K2Node_CallFunction_219.InText'] 
+=== K2Node_CallFunction_219 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetTextLibrary'",MemberName="Conv
+    self                 "object"   links=[] "/Script/Engine.Default__KismetTextLibrary"
+    InText               "text"     links=['K2Node_CallFunction_218.ReturnValue'] 
+    ReturnValue          "string"   links=['K2Node_CallFunction_220.InString'] 
+=== K2Node_CallFunction_220 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetStringLibrary'",MemberName="Co
+    self                 "object"   links=[] "/Script/Engine.Default__KismetStringLibrary"
+    InString             "string"   links=['K2Node_CallFunction_219.ReturnValue'] 
+    ReturnValue          "int"      links=['K2Node_CallFunction_224.InInt', 'K2Node_CallFunction_234.Keep'] "0"
+=== K2Node_VariableGet_77 (K2Node_VariableGet) VariableReference=(MemberName="KeepAllCheckbox",MemberGuid=333BAA814D2B845D3AADAB9D26DA5E6E,bSelfContext=True)
+    KeepAllCheckbox      "object"   links=['K2Node_CallFunction_221.self'] 
+    self                 "object"   links=[] 
+=== K2Node_CallFunction_221 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.CheckBox'",MemberName="IsChecked")
+    self                 "object"   links=['K2Node_VariableGet_77.KeepAllCheckbox'] 
+    ReturnValue          "bool"     links=['K2Node_CallFunction_225.InBool', 'K2Node_CallFunction_234.KeepAll'] "false"
+=== K2Node_CallFunction_222 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Ge
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    Object               "object"   links=['K2Node_GetArrayItem_31.Output'] 
+    ReturnValue          "string"   links=['K2Node_CallFunction_227.InString'] 
+=== K2Node_CallFunction_223 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetStringLibrary'",MemberName="Co
+    self                 "object"   links=[] "/Script/Engine.Default__KismetStringLibrary"
+    InInt                "int"      links=['K2Node_GetArrayItem_32.Output'] "0"
+    ReturnValue          "string"   links=['K2Node_CallFunction_229.InString'] 
+=== K2Node_CallFunction_224 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetStringLibrary'",MemberName="Co
+    self                 "object"   links=[] "/Script/Engine.Default__KismetStringLibrary"
+    InInt                "int"      links=['K2Node_CallFunction_220.ReturnValue'] "0"
+    ReturnValue          "string"   links=['K2Node_CallFunction_231.InString'] 
+=== K2Node_CallFunction_225 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetStringLibrary'",MemberName="Co
+    self                 "object"   links=[] "/Script/Engine.Default__KismetStringLibrary"
+    InBool               "bool"     links=['K2Node_CallFunction_221.ReturnValue'] "false"
+    ReturnValue          "string"   links=['K2Node_CallFunction_233.InString'] 
+=== K2Node_CallFunction_226 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_215.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_227.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=[] "SAVECLICK: Station"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_227 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_226.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_228.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=['K2Node_CallFunction_222.ReturnValue'] "Hello"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_228 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_227.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_229.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=[] "SAVECLICK: TemplateID"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_229 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_228.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_230.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=['K2Node_CallFunction_223.ReturnValue'] "Hello"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_230 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_229.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_231.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=[] "SAVECLICK: Keep"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_231 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_230.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_232.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=['K2Node_CallFunction_224.ReturnValue'] "Hello"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_232 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_231.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_233.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=[] "SAVECLICK: KeepAll"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_233 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_232.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_234.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=['K2Node_CallFunction_225.ReturnValue'] "Hello"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_234 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Menu/Menu_ModController.Men
+    execute              "exec"     links=['K2Node_CallFunction_233.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_Close.execute'] 
+    self                 "object"   links=['K2Node_GetArrayItem_30.Output'] 
+    Station              "object"   links=['K2Node_GetArrayItem_31.Output'] 
+    TemplateID           "int"      links=['K2Node_GetArrayItem_32.Output'] "0"
+    Keep                 "int"      links=['K2Node_CallFunction_220.ReturnValue'] "0"
+    KeepAll              "bool"     links=['K2Node_CallFunction_221.ReturnValue'] "false"
+=== K2Node_CallFunction_6 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.GameplayStatics'",MemberName="GetAll
+    execute              "exec"     links=['K2Node_ComponentBoundEvent_5.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_Print.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__GameplayStatics"
+    WorldContextObject   "object"   links=[] 
+    ActorClass           "class"    links=[] "/Game/Mods/Menu/Menu_ModController.Menu_ModController_C"
+    OutActors            "object"   links=['K2Node_GetArrayItem_0.Array'] 
+=== K2Node_GetArrayItem_0 (K2Node_GetArrayItem) 
+    Array                "object"   links=['K2Node_CallFunction_6.OutActors'] 
+    Dimension 1          "int"      links=[] "0"
+    Output               "object"   links=['K2Node_VariableGet_1.self', 'K2Node_CallFunction_AddKeepRule.self'] 
+=== K2Node_VariableGet_1 (K2Node_VariableGet) VariableReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Menu/Menu_ModController.Men
+    ManagedStations      "object"   links=['K2Node_GetArrayItem_1.Array'] 
+    self                 "object"   links=['K2Node_GetArrayItem_0.Output'] 
+=== K2Node_VariableGet_0 (K2Node_VariableGet) VariableReference=(MemberName="BenchDropdown",MemberGuid=4BB2E4504FBAA8DA9C99909E2F2FEDCF,bSelfContext=True)
+    BenchDropdown        "object"   links=['K2Node_CallFunction_1.self'] 
+    self                 "object"   links=[] 
+=== K2Node_CallFunction_1 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.ComboBoxString'",MemberName="GetSelecte
+    self                 "object"   links=['K2Node_VariableGet_0.BenchDropdown'] 
+    ReturnValue          "int"      links=['K2Node_GetArrayItem_1.Dimension 1'] "0"
+=== K2Node_GetArrayItem_1 (K2Node_GetArrayItem) 
+    Array                "object"   links=['K2Node_VariableGet_1.ManagedStations'] 
+    Dimension 1          "int"      links=['K2Node_CallFunction_1.ReturnValue'] "0"
+    Output               "object"   links=['K2Node_CallFunction_16.Object', 'K2Node_CallFunction_AddKeepRule.Station'] 
+=== K2Node_VariableGet_2 (K2Node_VariableGet) VariableReference=(MemberName="ItemDropdown",MemberGuid=8248B9604C275EA4C8D83F89DF3A2ADC,bSelfContext=True)
+    ItemDropdown         "object"   links=['K2Node_CallFunction_2.self'] 
+    self                 "object"   links=[] 
+=== K2Node_CallFunction_2 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.ComboBoxString'",MemberName="GetSelecte
+    self                 "object"   links=['K2Node_VariableGet_2.ItemDropdown'] 
+    ReturnValue          "int"      links=['K2Node_GetArrayItem_2.Dimension 1'] "0"
+=== K2Node_VariableGet_3 (K2Node_VariableGet) VariableReference=(MemberName="ItemTemplateIDs",MemberGuid=239C718845955110A90AD9B88028542F,bSelfContext=True)
+    ItemTemplateIDs      "int"      links=['K2Node_GetArrayItem_2.Array'] 
+    self                 "object"   links=[] 
+=== K2Node_GetArrayItem_2 (K2Node_GetArrayItem) 
+    Array                "int"      links=['K2Node_VariableGet_3.ItemTemplateIDs'] 
+    Dimension 1          "int"      links=['K2Node_CallFunction_2.ReturnValue'] "0"
+    Output               "int"      links=['K2Node_CallFunction_7.InInt', 'K2Node_CallFunction_AddKeepRule.TemplateID'] 
+=== K2Node_VariableGet_4 (K2Node_VariableGet) VariableReference=(MemberName="KeepInput",MemberGuid=0576B4C241B7D9447A9466B9A84A9D0A,bSelfContext=True)
+    KeepInput            "object"   links=['K2Node_CallFunction_3.self'] 
+    self                 "object"   links=[] 
+=== K2Node_CallFunction_3 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.EditableTextBox'",MemberName="GetText")
+    self                 "object"   links=['K2Node_VariableGet_4.KeepInput'] 
+    ReturnValue          "text"     links=['K2Node_CallFunction_507.InText'] 
+=== K2Node_CallFunction_507 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetTextLibrary'",MemberName="Conv
+    self                 "object"   links=[] "/Script/Engine.Default__KismetTextLibrary"
+    InText               "text"     links=['K2Node_CallFunction_3.ReturnValue'] 
+    ReturnValue          "string"   links=['K2Node_CallFunction_4.InString'] 
+=== K2Node_CallFunction_4 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetStringLibrary'",MemberName="Co
+    self                 "object"   links=[] "/Script/Engine.Default__KismetStringLibrary"
+    InString             "string"   links=['K2Node_CallFunction_507.ReturnValue'] 
+    ReturnValue          "int"      links=['K2Node_CallFunction_8.InInt', 'K2Node_CallFunction_AddKeepRule.Keep'] "0"
+=== K2Node_VariableGet_5 (K2Node_VariableGet) VariableReference=(MemberName="KeepAllCheckbox",MemberGuid=333BAA814D2B845D3AADAB9D26DA5E6E,bSelfContext=True)
+    KeepAllCheckbox      "object"   links=['K2Node_CallFunction_5.self'] 
+    self                 "object"   links=[] 
+=== K2Node_CallFunction_5 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.CheckBox'",MemberName="IsChecked")
+    self                 "object"   links=['K2Node_VariableGet_5.KeepAllCheckbox'] 
+    ReturnValue          "bool"     links=['K2Node_CallFunction_9.InBool', 'K2Node_CallFunction_AddKeepRule.KeepAll'] "false"
+=== K2Node_CallFunction_16 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Ge
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    Object               "object"   links=['K2Node_GetArrayItem_1.Output'] 
+    ReturnValue          "string"   links=['K2Node_CallFunction_Print_1.InString'] 
+=== K2Node_CallFunction_7 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetStringLibrary'",MemberName="Co
+    self                 "object"   links=[] "/Script/Engine.Default__KismetStringLibrary"
+    InInt                "int"      links=['K2Node_GetArrayItem_2.Output'] "0"
+    ReturnValue          "string"   links=['K2Node_CallFunction_Print_3.InString'] 
+=== K2Node_CallFunction_8 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetStringLibrary'",MemberName="Co
+    self                 "object"   links=[] "/Script/Engine.Default__KismetStringLibrary"
+    InInt                "int"      links=['K2Node_CallFunction_4.ReturnValue'] "0"
+    ReturnValue          "string"   links=['K2Node_CallFunction_Print_5.InString'] 
+=== K2Node_CallFunction_9 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetStringLibrary'",MemberName="Co
+    self                 "object"   links=[] "/Script/Engine.Default__KismetStringLibrary"
+    InBool               "bool"     links=['K2Node_CallFunction_5.ReturnValue'] "false"
+    ReturnValue          "string"   links=['K2Node_CallFunction_Print_7.InString'] 
+=== K2Node_CallFunction_Print (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_6.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_Print_1.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=[] "SAVECLICK: Station"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_Print_1 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_Print.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_Print_2.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=['K2Node_CallFunction_16.ReturnValue'] "Hello"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_Print_2 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_Print_1.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_Print_3.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=[] "SAVECLICK: TemplateID"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_Print_3 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_Print_2.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_Print_4.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=['K2Node_CallFunction_7.ReturnValue'] "Hello"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_Print_4 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_Print_3.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_Print_5.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=[] "SAVECLICK: Keep"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_Print_5 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_Print_4.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_Print_6.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=['K2Node_CallFunction_8.ReturnValue'] "Hello"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_Print_6 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_Print_5.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_Print_7.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=[] "SAVECLICK: KeepAll"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_Print_7 (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="Pr
+    execute              "exec"     links=['K2Node_CallFunction_Print_6.then'] 
+    then                 "exec"     links=['K2Node_CallFunction_AddKeepRule.execute'] 
+    self                 "object"   links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    WorldContextObject   "object"   links=[] 
+    InString             "string"   links=['K2Node_CallFunction_9.ReturnValue'] "Hello"
+    bPrintToScreen       "bool"     links=[] "true"
+    bPrintToLog          "bool"     links=[] "true"
+    TextColor            "struct"   links=[] "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)"
+    Duration             "real"     links=[] "2.000000"
+    Key                  "name"     links=[] "None"
+=== K2Node_CallFunction_AddKeepRule (K2Node_CallFunction) FunctionReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Menu/Menu_ModController.Men
+    execute              "exec"     links=['K2Node_CallFunction_Print_7.then'] 
+    then                 "exec"     links=[] 
+    self                 "object"   links=['K2Node_GetArrayItem_0.Output'] 
+    Station              "object"   links=['K2Node_GetArrayItem_1.Output'] 
+    TemplateID           "int"      links=['K2Node_GetArrayItem_2.Output'] "0"
+    Keep                 "int"      links=['K2Node_CallFunction_4.ReturnValue'] "0"
+    KeepAll              "bool"     links=['K2Node_CallFunction_5.ReturnValue'] "false"

@@ -1,0 +1,121 @@
+=== K2Node_ComponentBoundEvent_0 (K2Node_ComponentBoundEvent)
+    EventReference=(MemberParent="/Script/CoreUObject.Package'/Script/UMG'",MemberName="OnButtonClickedEvent__DelegateSignature")
+    OutputDelegate         "delegate"   links=[] 
+    then                   "exec"       links=['K2Node_CallFunction_5.execute'] 
+=== K2Node_CallFunction_10 (K2Node_CallFunction)
+    FunctionReference=(MemberName="Close",bSelfContext=True)
+    execute                "exec"       links=['K2Node_CallFunction_5.then'] 
+    then                   "exec"       links=[] 
+    self                   "object"     links=[] 
+    force                  "bool"       links=[] "false"
+=== K2Node_CallFunction_1 (K2Node_CallFunction)
+    FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.MultiLineEditableTextBox'",MemberName="GetText")
+    self                   "object"     links=[] 
+    ReturnValue            "text"       links=['K2Node_CallFunction_5.Text'] 
+=== K2Node_CallFunction_3 (K2Node_CallFunction)
+    FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.GameplayStatics'",MemberName="GetPlayerCharacter")
+    self                   "object"     links=[] "/Script/Engine.Default__GameplayStatics"
+    WorldContextObject     "object"     links=[] 
+    PlayerIndex            "int"        links=[] "0"
+    ReturnValue            "object"     links=['K2Node_CallFunction_4.self'] 
+=== K2Node_CallFunction_4 (K2Node_CallFunction)
+    FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.Actor'",MemberName="K2_GetComponentsByClass")
+    self                   "object"     links=['K2Node_CallFunction_3.ReturnValue'] 
+    ComponentClass         "class"      links=[] "/Game/Mods/Menu/AC_Menu.AC_Menu_C"
+    ReturnValue            "object"     links=['K2Node_CallFunction_5.self'] 
+=== K2Node_CallFunction_5 (K2Node_CallFunction)
+    FunctionReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Menu/AC_Menu.AC_Menu_C'",MemberName="SaveVariableToMC",MemberGuid=3F63099E4EB8CEC6A031CD9384E9FADC)
+    execute                "exec"       links=['K2Node_ComponentBoundEvent_0.then'] 
+    then                   "exec"       links=['K2Node_CallFunction_10.execute'] 
+    self                   "object"     links=['K2Node_CallFunction_4.ReturnValue'] 
+    Text                   "text"       links=['K2Node_CallFunction_1.ReturnValue'] 
+=== K2Node_Event_3 (K2Node_Event)
+    EventReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.UserWidget'",MemberName="Construct")
+    OutputDelegate         "delegate"   links=[] 
+    then                   "exec"       links=['K2Node_ExecutionSequence_0.execute'] 
+=== K2Node_CallFunction_11 (K2Node_CallFunction)
+    FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.GameplayStatics'",MemberName="GetAllActorsOfClass")
+    execute                "exec"       links=['K2Node_ExecutionSequence_0.then_0'] 
+    then                   "exec"       links=['K2Node_CallFunction_12.execute'] 
+    self                   "object"     links=[] "/Script/Engine.Default__GameplayStatics"
+    WorldContextObject     "object"     links=[] 
+    ActorClass             "class"      links=[] "/Game/Mods/Menu/Menu_ModController.Menu_ModController_C"
+    OutActors              "object"     links=['K2Node_GetArrayItem_3.Array'] 
+=== K2Node_GetArrayItem_3 (K2Node_GetArrayItem)
+    Array                  "object"     links=['K2Node_CallFunction_11.OutActors'] 
+    Dimension 1            "int"        links=[] "0"
+    Output                 "object"     links=['K2Node_VariableGet_5.self', 'K2Node_CallFunction_0.self'] 
+=== K2Node_VariableGet_5 (K2Node_VariableGet)
+    VariableReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Menu/Menu_ModController.Menu_ModController_C'",MemberName="AmadanText",MemberGuid=CD3A691C45D883D7311D409A81F02885)
+    AmadanText             "text"       links=['K2Node_CallFunction_12.InText'] 
+    self                   "object"     links=['K2Node_GetArrayItem_3.Output'] 
+=== K2Node_CallFunction_12 (K2Node_CallFunction)
+    FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.MultiLineEditableTextBox'",MemberName="SetText")
+    execute                "exec"       links=['K2Node_CallFunction_11.then'] 
+    then                   "exec"       links=[] 
+    self                   "object"     links=[] 
+    InText                 "text"       links=['K2Node_VariableGet_5.AmadanText'] 
+=== K2Node_CallFunction_8 (K2Node_CallFunction)
+    FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.GameplayStatics'",MemberName="GetAllActorsOfClass")
+    execute                "exec"       links=['K2Node_ExecutionSequence_0.then_1'] 
+    then                   "exec"       links=['K2Node_CallFunction_0.execute'] 
+    self                   "object"     links=[] "/Script/Engine.Default__GameplayStatics"
+    WorldContextObject     "object"     links=[] 
+    ActorClass             "class"      links=[] "/Game/Mods/Menu/BP_PL_Table_Strategy_Amadan.BP_PL_Table_Strategy_Amadan_C"
+    OutActors              "object"     links=['K2Node_GetArrayItem_1.Array'] 
+=== K2Node_GetArrayItem_1 (K2Node_GetArrayItem)
+    Array                  "object"     links=['K2Node_CallFunction_8.OutActors'] 
+    Dimension 1            "int"        links=[] "0"
+    Output                 "object"     links=['K2Node_CallFunction_0.AnchorActor'] 
+=== K2Node_CallFunction_0 (K2Node_CallFunction)
+    FunctionReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Menu/Menu_ModController.Menu_ModController_C'",MemberName="GatherNearbyBenches",MemberGuid=CCF54CFD4BC437159B5892A2EF0EC0C4)
+    execute                "exec"       links=['K2Node_CallFunction_8.then'] 
+    then                   "exec"       links=['K2Node_CallFunction_6.execute'] 
+    self                   "object"     links=['K2Node_GetArrayItem_3.Output'] 
+    AnchorActor            "object"     links=['K2Node_GetArrayItem_1.Output'] 
+    Range                  "real"       links=[] "3000.0"
+    ReturnValue            "object"     links=[] 
+=== K2Node_ExecutionSequence_0 (K2Node_ExecutionSequence)
+    execute                "exec"       links=['K2Node_Event_3.then'] 
+    then_0                 "exec"       links=['K2Node_CallFunction_11.execute'] 
+    then_1                 "exec"       links=['K2Node_CallFunction_8.execute'] 
+=== K2Node_CallFunction_6 (K2Node_CallFunction)
+    FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.GameplayStatics'",MemberName="GetAllActorsOfClass")
+    execute                "exec"       links=['K2Node_CallFunction_0.then'] 
+    then                   "exec"       links=['K2Node_MacroInstance_0.Exec'] 
+    self                   "object"     links=[] "/Script/Engine.Default__GameplayStatics"
+    WorldContextObject     "object"     links=[] 
+    ActorClass             "class"      links=[] "/Game/Mods/Menu/Menu_ModController.Menu_ModController_C"
+    OutActors              "object"     links=['K2Node_GetArrayItem_0.Array'] 
+=== K2Node_GetArrayItem_0 (K2Node_GetArrayItem)
+    Array                  "object"     links=['K2Node_CallFunction_6.OutActors'] 
+    Dimension 1            "int"        links=[] "0"
+    Output                 "object"     links=['K2Node_VariableGet_1.self'] 
+=== K2Node_VariableGet_1 (K2Node_VariableGet)
+    VariableReference=(MemberName="ManagedStations",MemberGuid=996311EC4F3077BB4F2AFAADB1BC959D)
+    ManagedStations        "object"     links=['K2Node_MacroInstance_0.Array'] 
+    self                   "object"     links=[] 
+    self                   "object"     links=['K2Node_GetArrayItem_0.Output'] 
+=== K2Node_MacroInstance_0 (K2Node_MacroInstance)
+    MacroGraphReference=(MacroGraph="/Script/Engine.EdGraph'/Engine/EditorBlueprintResources/StandardMacros.StandardMacros:ForEachLoop'",GraphBlueprint="/Script/Engine.Blueprint'/Engine/EditorBlueprintResources/StandardMacros.StandardMacros'",GraphGuid=99DBFD5540A796041F72A5A9DA655026)
+    Exec                   "exec"       links=['K2Node_CallFunction_6.then'] 
+    Array                  "object"     links=['K2Node_VariableGet_1.ManagedStations'] 
+    LoopBody               "exec"       links=['K2Node_CallFunction_7.execute'] 
+    Array Element          "object"     links=['K2Node_CallFunction_16.Object'] 
+    Array Index            "int"        links=[] 
+    Completed              "exec"       links=[] 
+=== K2Node_CallFunction_16 (K2Node_CallFunction)
+    FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.KismetSystemLibrary'",MemberName="GetDisplayName")
+    self                   "object"     links=[] "/Script/Engine.Default__KismetSystemLibrary"
+    Object                 "object"     links=['K2Node_MacroInstance_0.Array Element'] 
+    ReturnValue            "string"     links=['K2Node_CallFunction_7.Option'] 
+=== K2Node_VariableGet_0 (K2Node_VariableGet)
+    VariableReference=(MemberName="BenchDropdown",MemberGuid=4BB2E4504FBAA8DA9C99909E2F2FEDCF,bSelfContext=True)
+    BenchDropdown          "object"     links=['K2Node_CallFunction_7.self'] 
+    self                   "object"     links=[] 
+=== K2Node_CallFunction_7 (K2Node_CallFunction)
+    FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.ComboBoxString'",MemberName="AddOption")
+    execute                "exec"       links=['K2Node_MacroInstance_0.LoopBody'] 
+    then                   "exec"       links=[] 
+    self                   "object"     links=['K2Node_VariableGet_0.BenchDropdown'] 
+    Option                 "string"     links=['K2Node_CallFunction_16.ReturnValue'] 

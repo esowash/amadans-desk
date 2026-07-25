@@ -1,0 +1,153 @@
+Begin Object Class=/Script/UMG.SizeBox Name="SaveRuleFormBox" ExportPath="/Script/UMG.SizeBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleFormBox'"
+   Begin Object Class=/Script/UMG.SizeBoxSlot Name="SaveRuleFormBoxSlot_0" ExportPath="/Script/UMG.SizeBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleFormBox.SaveRuleFormBoxSlot_0'"
+   End Object
+   Begin Object Name="SaveRuleFormBoxSlot_0" ExportPath="/Script/UMG.SizeBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleFormBox.SaveRuleFormBoxSlot_0'"
+      Parent="/Script/UMG.SizeBox'SaveRuleFormBox'"
+      Content="/Script/UMG.VerticalBox'SaveRuleForm'"
+   End Object
+   Slots(0)="/Script/UMG.SizeBoxSlot'SaveRuleFormBoxSlot_0'"
+   WidthOverride=640.000000
+   bOverride_WidthOverride=True
+   HeightOverride=240.000000
+   bOverride_HeightOverride=True
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.VerticalBox Name="SaveRuleForm" ExportPath="/Script/UMG.VerticalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleForm'"
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="SaveRuleFormSlot_0" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleForm.SaveRuleFormSlot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="SaveRuleFormSlot_1" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleForm.SaveRuleFormSlot_1'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="SaveRuleFormSlot_2" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleForm.SaveRuleFormSlot_2'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="SaveRuleFormSlot_3" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleForm.SaveRuleFormSlot_3'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="SaveRuleFormSlot_4" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleForm.SaveRuleFormSlot_4'"
+   End Object
+   Begin Object Name="SaveRuleFormSlot_0" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleForm.SaveRuleFormSlot_0'"
+      Parent="/Script/UMG.VerticalBox'SaveRuleForm'"
+      Content="/Script/UMG.HorizontalBox'HorizontalBox_60'"
+   End Object
+   Begin Object Name="SaveRuleFormSlot_1" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleForm.SaveRuleFormSlot_1'"
+      Parent="/Script/UMG.VerticalBox'SaveRuleForm'"
+      Content="/Script/UMG.HorizontalBox'HorizontalBox_61'"
+   End Object
+   Begin Object Name="SaveRuleFormSlot_2" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleForm.SaveRuleFormSlot_2'"
+      Parent="/Script/UMG.VerticalBox'SaveRuleForm'"
+      Content="/Script/UMG.HorizontalBox'HorizontalBox_62'"
+   End Object
+   Begin Object Name="SaveRuleFormSlot_3" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleForm.SaveRuleFormSlot_3'"
+      Parent="/Script/UMG.VerticalBox'SaveRuleForm'"
+      Content="/Script/UMG.HorizontalBox'HorizontalBox_63'"
+   End Object
+   Begin Object Name="SaveRuleFormSlot_4" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveRuleForm.SaveRuleFormSlot_4'"
+      Parent="/Script/UMG.VerticalBox'SaveRuleForm'"
+      Content="/Script/UMG.Button'SaveButton'"
+   End Object
+   Slots(0)="/Script/UMG.VerticalBoxSlot'SaveRuleFormSlot_0'"
+   Slots(1)="/Script/UMG.VerticalBoxSlot'SaveRuleFormSlot_1'"
+   Slots(2)="/Script/UMG.VerticalBoxSlot'SaveRuleFormSlot_2'"
+   Slots(3)="/Script/UMG.VerticalBoxSlot'SaveRuleFormSlot_3'"
+   Slots(4)="/Script/UMG.VerticalBoxSlot'SaveRuleFormSlot_4'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="HorizontalBox_60" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_60'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="HorizontalBox_60Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_60.HorizontalBox_60Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="HorizontalBox_60Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_60.HorizontalBox_60Slot_1'"
+   End Object
+   Begin Object Name="HorizontalBox_60Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_60.HorizontalBox_60Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'HorizontalBox_60'"
+      Content="/Script/UMG.TextBlock'TextBlock_181'"
+   End Object
+   Begin Object Name="HorizontalBox_60Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_60.HorizontalBox_60Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'HorizontalBox_60'"
+      Content="/Script/UMG.ComboBoxString'BenchDropdown'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'HorizontalBox_60Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'HorizontalBox_60Slot_1'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="TextBlock_181" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.TextBlock_181'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "Bench:")
+End Object
+Begin Object Class=/Script/UMG.ComboBoxString Name="BenchDropdown" ExportPath="/Script/UMG.ComboBoxString'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.BenchDropdown'"
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="HorizontalBox_61" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_61'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="HorizontalBox_61Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_61.HorizontalBox_61Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="HorizontalBox_61Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_61.HorizontalBox_61Slot_1'"
+   End Object
+   Begin Object Name="HorizontalBox_61Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_61.HorizontalBox_61Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'HorizontalBox_61'"
+      Content="/Script/UMG.TextBlock'TextBlock_182'"
+   End Object
+   Begin Object Name="HorizontalBox_61Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_61.HorizontalBox_61Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'HorizontalBox_61'"
+      Content="/Script/UMG.EditableTextBox'TemplateIDInput'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'HorizontalBox_61Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'HorizontalBox_61Slot_1'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="TextBlock_182" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.TextBlock_182'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "Item ID:")
+End Object
+Begin Object Class=/Script/UMG.EditableTextBox Name="TemplateIDInput" ExportPath="/Script/UMG.EditableTextBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.TemplateIDInput'"
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="HorizontalBox_62" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_62'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="HorizontalBox_62Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_62.HorizontalBox_62Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="HorizontalBox_62Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_62.HorizontalBox_62Slot_1'"
+   End Object
+   Begin Object Name="HorizontalBox_62Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_62.HorizontalBox_62Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'HorizontalBox_62'"
+      Content="/Script/UMG.TextBlock'TextBlock_183'"
+   End Object
+   Begin Object Name="HorizontalBox_62Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_62.HorizontalBox_62Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'HorizontalBox_62'"
+      Content="/Script/UMG.EditableTextBox'KeepInput'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'HorizontalBox_62Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'HorizontalBox_62Slot_1'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="TextBlock_183" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.TextBlock_183'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "Keep:")
+End Object
+Begin Object Class=/Script/UMG.EditableTextBox Name="KeepInput" ExportPath="/Script/UMG.EditableTextBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.KeepInput'"
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="HorizontalBox_63" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_63'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="HorizontalBox_63Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_63.HorizontalBox_63Slot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="HorizontalBox_63Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_63.HorizontalBox_63Slot_1'"
+   End Object
+   Begin Object Name="HorizontalBox_63Slot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_63.HorizontalBox_63Slot_0'"
+      Parent="/Script/UMG.HorizontalBox'HorizontalBox_63'"
+      Content="/Script/UMG.TextBlock'TextBlock_184'"
+   End Object
+   Begin Object Name="HorizontalBox_63Slot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.HorizontalBox_63.HorizontalBox_63Slot_1'"
+      Parent="/Script/UMG.HorizontalBox'HorizontalBox_63'"
+      Content="/Script/UMG.CheckBox'KeepAllCheckbox'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'HorizontalBox_63Slot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'HorizontalBox_63Slot_1'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="TextBlock_184" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.TextBlock_184'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "Keep All:")
+End Object
+Begin Object Class=/Script/UMG.CheckBox Name="KeepAllCheckbox" ExportPath="/Script/UMG.CheckBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.KeepAllCheckbox'"
+End Object
+Begin Object Class=/Script/UMG.Button Name="SaveButton" ExportPath="/Script/UMG.Button'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveButton'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="SaveButtonSlot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveButton.SaveButtonSlot_0'"
+   End Object
+   Begin Object Name="SaveButtonSlot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveButton.SaveButtonSlot_0'"
+      Parent="/Script/UMG.Button'SaveButton'"
+      Content="/Script/UMG.TextBlock'TextBlock_180'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'SaveButtonSlot_0'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="TextBlock_180" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.TextBlock_180'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "Save Rule")
+End Object

@@ -1,0 +1,85 @@
+Begin Object Class=/Script/UMG.Border Name="Border_283" ExportPath="/Script/UMG.Border'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283'"
+   Begin Object Class=/Script/UMG.BorderSlot Name="BorderSlot_3" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_3'"
+   End Object
+   Begin Object Class=/Script/UMG.BorderSlot Name="BorderSlot_2" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_2'"
+   End Object
+   Begin Object Class=/Script/UMG.BorderSlot Name="BorderSlot_1" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_1'"
+   End Object
+   Begin Object Class=/Script/UMG.BorderSlot Name="BorderSlot_0" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.BorderSlot Name="BorderSlot_6" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_6'"
+   End Object
+   Begin Object Class=/Script/UMG.BorderSlot Name="BorderSlot_5" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_5'"
+   End Object
+   Begin Object Class=/Script/UMG.BorderSlot Name="BorderSlot_4" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_4'"
+   End Object
+   Begin Object Name="BorderSlot_3" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_3'"
+   End Object
+   Begin Object Name="BorderSlot_2" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_2'"
+   End Object
+   Begin Object Name="BorderSlot_1" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_1'"
+      Padding=(Right=16.000000)
+   End Object
+   Begin Object Name="BorderSlot_0" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_0'"
+   End Object
+   Begin Object Name="BorderSlot_6" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_6'"
+      Parent="/Script/UMG.Border'Border_283'"
+      Content="/Script/UMG.VerticalBox'VerticalBox_65'"
+   End Object
+   Begin Object Name="BorderSlot_5" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_5'"
+   End Object
+   Begin Object Name="BorderSlot_4" ExportPath="/Script/UMG.BorderSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Border_283.BorderSlot_4'"
+   End Object
+   Background=(TintColor=(SpecifiedColor=(R=0.151042,G=0.151042,B=0.151042,A=0.356522)),ImageSize=(X=640.000000,Y=480.000000))
+   Slots(0)="/Script/UMG.BorderSlot'BorderSlot_6'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMGEditor.WidgetSlotPair Name="WidgetSlotPair_0" ExportPath="/Script/UMGEditor.WidgetSlotPair'/Engine/Transient.WidgetSlotPair_0'"
+   WidgetName="Border_283"
+End Object
+Begin Object Class=/Script/UMG.VerticalBox Name="VerticalBox_65" ExportPath="/Script/UMG.VerticalBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.VerticalBox_65'"
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="VerticalBoxSlot_0" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.VerticalBox_65.VerticalBoxSlot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="VerticalBoxSlot_2" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.VerticalBox_65.VerticalBoxSlot_2'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="VerticalBoxSlot_1" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.VerticalBox_65.VerticalBoxSlot_1'"
+   End Object
+   Begin Object Name="VerticalBoxSlot_0" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.VerticalBox_65.VerticalBoxSlot_0'"
+      HorizontalAlignment=HAlign_Center
+      Parent="/Script/UMG.VerticalBox'VerticalBox_65'"
+      Content="/Script/UMG.TextBlock'TextBlock_110'"
+   End Object
+   Begin Object Name="VerticalBoxSlot_2" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.VerticalBox_65.VerticalBoxSlot_2'"
+      HorizontalAlignment=HAlign_Center
+      Parent="/Script/UMG.VerticalBox'VerticalBox_65'"
+      Content="/Script/UMG.Button'Button_634'"
+   End Object
+   Begin Object Name="VerticalBoxSlot_1" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.VerticalBox_65.VerticalBoxSlot_1'"
+      Size=(SizeRule=Fill)
+      Parent="/Script/UMG.VerticalBox'VerticalBox_65'"
+      Content="/Script/UMG.MultiLineEditableTextBox'MultiLineEditableTextBox_74'"
+   End Object
+   Slots(0)="/Script/UMG.VerticalBoxSlot'VerticalBoxSlot_0'"
+   Slots(1)="/Script/UMG.VerticalBoxSlot'VerticalBoxSlot_1'"
+   Slots(2)="/Script/UMG.VerticalBoxSlot'VerticalBoxSlot_2'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="TextBlock_110" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.TextBlock_110'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "Text Block")
+End Object
+Begin Object Class=/Script/UMG.MultiLineEditableTextBox Name="MultiLineEditableTextBox_74" ExportPath="/Script/UMG.MultiLineEditableTextBox'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.MultiLineEditableTextBox_74'"
+End Object
+Begin Object Class=/Script/UMG.Button Name="Button_634" ExportPath="/Script/UMG.Button'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Button_634'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="ButtonSlot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Button_634.ButtonSlot_0'"
+   End Object
+   Begin Object Name="ButtonSlot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.Button_634.ButtonSlot_0'"
+      Parent="/Script/UMG.Button'Button_634'"
+      Content="/Script/UMG.TextBlock'TextBlock_179'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'ButtonSlot_0'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="TextBlock_179" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.TextBlock_179'"
+   Text=NSLOCTEXT("[99960C0D9943E2CA04057C928657A15C]", "9F8712E9423C9F619996E88D7804895E", "Close")
+End Object
+

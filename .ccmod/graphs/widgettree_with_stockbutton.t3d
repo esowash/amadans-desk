@@ -1,0 +1,150 @@
+Begin Object Class=/Script/UMG.VerticalBox Name="RootPanel" ExportPath="/Script/UMG.VerticalBox'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel'"
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RootSlot_2" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel.RootSlot_2'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RootSlot_1" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel.RootSlot_1'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RootSlot_0" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel.RootSlot_0'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RootSlot_3" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel.RootSlot_3'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="VerticalBoxSlot_1" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel.VerticalBoxSlot_1'"
+   End Object
+   Begin Object Name="RootSlot_2" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel.RootSlot_2'"
+      Padding=(Left=8.000000,Top=4.000000,Right=8.000000,Bottom=4.000000)
+      Parent="/Script/UMG.VerticalBox'RootPanel'"
+      Content="/Script/UMG.HorizontalBox'KeepAllRow'"
+   End Object
+   Begin Object Name="RootSlot_1" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel.RootSlot_1'"
+      Padding=(Left=8.000000,Top=4.000000,Right=8.000000,Bottom=4.000000)
+      Parent="/Script/UMG.VerticalBox'RootPanel'"
+      Content="/Script/UMG.HorizontalBox'KeepRow'"
+   End Object
+   Begin Object Name="RootSlot_0" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel.RootSlot_0'"
+      Padding=(Left=8.000000,Top=8.000000,Right=8.000000,Bottom=4.000000)
+      Parent="/Script/UMG.VerticalBox'RootPanel'"
+      Content="/Script/UMG.TextBlock'TitleText'"
+   End Object
+   Begin Object Name="RootSlot_3" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel.RootSlot_3'"
+      Padding=(Left=8.000000,Top=8.000000,Right=8.000000,Bottom=8.000000)
+      HorizontalAlignment=HAlign_Left
+      Parent="/Script/UMG.VerticalBox'RootPanel'"
+      Content="/Game/UI/Widgets/Buttons/WBP_ButtonMinor.WBP_ButtonMinor_C'SaveButton'"
+   End Object
+   Begin Object Name="VerticalBoxSlot_1" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel.VerticalBoxSlot_1'"
+      Padding=(Left=8.000000,Top=8.000000,Right=8.000000,Bottom=8.000000)
+      HorizontalAlignment=HAlign_Left
+      Parent="/Script/UMG.VerticalBox'RootPanel'"
+      Content="/Game/UI/Widgets/Buttons/WBP_ButtonMinor.WBP_ButtonMinor_C'CloseButton'"
+   End Object
+   Begin Object Class=/Script/UMG.VerticalBoxSlot Name="RootSlot_4" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel.RootSlot_4'"
+   End Object
+   Slots(0)="/Script/UMG.VerticalBoxSlot'RootSlot_0'"
+   Slots(1)="/Script/UMG.VerticalBoxSlot'RootSlot_1'"
+   Slots(2)="/Script/UMG.VerticalBoxSlot'RootSlot_2'"
+   Slots(3)="/Script/UMG.VerticalBoxSlot'RootSlot_3'"
+   Slots(4)="/Script/UMG.VerticalBoxSlot'VerticalBoxSlot_1'"
+   Slots(5)="/Script/UMG.VerticalBoxSlot'RootSlot_4'"
+   bOverride_Cursor=True
+   bExpandedInDesigner=True
+   DisplayLabel="RootPanel"
+End Object
+Begin Object Class=/Script/UMGEditor.WidgetSlotPair Name="WidgetSlotPair_0" ExportPath="/Script/UMGEditor.WidgetSlotPair'/Engine/Transient.WidgetSlotPair_0'"
+   WidgetName="RootPanel"
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="TitleText" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.TitleText'"
+   Text=NSLOCTEXT("", "STOCKER_PANEL_TITLE", "Furnace Dry Wood Rule (test)")
+   DisplayLabel="TitleText"
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="KeepRow" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepRow'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="KeepRowSlot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepRow.KeepRowSlot_1'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="KeepRowSlot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepRow.KeepRowSlot_0'"
+   End Object
+   Begin Object Name="KeepRowSlot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepRow.KeepRowSlot_1'"
+      Size=(SizeRule=Fill)
+      VerticalAlignment=VAlign_Center
+      Parent="/Script/UMG.HorizontalBox'KeepRow'"
+      Content="/Script/UMG.EditableTextBox'KeepInput'"
+   End Object
+   Begin Object Name="KeepRowSlot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepRow.KeepRowSlot_0'"
+      Padding=(Right=8.000000)
+      VerticalAlignment=VAlign_Center
+      Parent="/Script/UMG.HorizontalBox'KeepRow'"
+      Content="/Script/UMG.TextBlock'KeepLabel'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'KeepRowSlot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'KeepRowSlot_1'"
+   bExpandedInDesigner=True
+   DisplayLabel="KeepRow"
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="KeepLabel" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepLabel'"
+   Text=NSLOCTEXT("", "STOCKER_KEEP_LABEL", "Keep:")
+   DisplayLabel="KeepLabel"
+End Object
+Begin Object Class=/Script/UMG.EditableTextBox Name="KeepInput" ExportPath="/Script/UMG.EditableTextBox'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepInput'"
+   Text=NSLOCTEXT("", "STOCKER_KEEP_DEFAULT", "0")
+   DisplayLabel="KeepInput"
+End Object
+Begin Object Class=/Script/UMG.HorizontalBox Name="KeepAllRow" ExportPath="/Script/UMG.HorizontalBox'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepAllRow'"
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="KeepAllRowSlot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepAllRow.KeepAllRowSlot_1'"
+   End Object
+   Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="KeepAllRowSlot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepAllRow.KeepAllRowSlot_0'"
+   End Object
+   Begin Object Name="KeepAllRowSlot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepAllRow.KeepAllRowSlot_1'"
+      VerticalAlignment=VAlign_Center
+      Parent="/Script/UMG.HorizontalBox'KeepAllRow'"
+      Content="/Script/UMG.CheckBox'KeepAllCheck'"
+   End Object
+   Begin Object Name="KeepAllRowSlot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepAllRow.KeepAllRowSlot_0'"
+      Padding=(Right=8.000000)
+      VerticalAlignment=VAlign_Center
+      Parent="/Script/UMG.HorizontalBox'KeepAllRow'"
+      Content="/Script/UMG.TextBlock'KeepAllLabel'"
+   End Object
+   Slots(0)="/Script/UMG.HorizontalBoxSlot'KeepAllRowSlot_0'"
+   Slots(1)="/Script/UMG.HorizontalBoxSlot'KeepAllRowSlot_1'"
+   bExpandedInDesigner=True
+   DisplayLabel="KeepAllRow"
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="KeepAllLabel" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepAllLabel'"
+   Text=NSLOCTEXT("", "STOCKER_KEEPALL_LABEL", "Keep All:")
+   DisplayLabel="KeepAllLabel"
+End Object
+Begin Object Class=/Script/UMG.CheckBox Name="KeepAllCheck" ExportPath="/Script/UMG.CheckBox'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.KeepAllCheck'"
+   DisplayLabel="KeepAllCheck"
+End Object
+Begin Object Class=/Game/UI/Widgets/Buttons/WBP_ButtonMinor.WBP_ButtonMinor_C Name="SaveButton" ExportPath="/Game/UI/Widgets/Buttons/WBP_ButtonMinor.WBP_ButtonMinor_C'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.SaveButton'"
+   Label=NSLOCTEXT("", "STOCKER_SAVE_BTN", "Save Rule")
+   EnableEditorOnlyTextPreview=False
+   bOverride_Cursor=True
+   Visibility=Visible
+   DisplayLabel="SaveButton"
+End Object
+Begin Object Class=/Game/UI/Widgets/Buttons/WBP_ButtonMinor.WBP_ButtonMinor_C Name="CloseButton" ExportPath="/Game/UI/Widgets/Buttons/WBP_ButtonMinor.WBP_ButtonMinor_C'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.CloseButton'"
+   Label=NSLOCTEXT("[0F024ED2561954FB88EF6D9AD95D004D]", "5A5A29954C5CB145D569859B53846960", "Close")
+   EnableEditorOnlyTextPreview=False
+   bOverride_Cursor=True
+   Visibility=Visible
+   DisplayLabel="CloseButton"
+End Object
+Begin Object Name="RootSlot_4" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.RootPanel.RootSlot_4'"
+   Padding=(Left=8.000000,Top=8.000000,Right=8.000000,Bottom=8.000000)
+   HorizontalAlignment=HAlign_Left
+   Parent="/Script/UMG.VerticalBox'RootPanel'"
+   Content="/Script/UMG.Button'StockCloseButton'"
+End Object
+Begin Object Class=/Script/UMG.Button Name="StockCloseButton" ExportPath="/Script/UMG.Button'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.StockCloseButton'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="StockCloseButtonSlot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.StockCloseButton.StockCloseButtonSlot_0'"
+   End Object
+   Begin Object Name="StockCloseButtonSlot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.StockCloseButton.StockCloseButtonSlot_0'"
+      Parent="/Script/UMG.Button'StockCloseButton'"
+      Content="/Script/UMG.TextBlock'StockCloseLabel'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'StockCloseButtonSlot_0'"
+   DisplayLabel="StockCloseButton"
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="StockCloseLabel" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Stocker/W_StockerTestPanel.W_StockerTestPanel:WidgetTree.StockCloseLabel'"
+   Text=NSLOCTEXT("", "STOCKER_STOCKCLOSE_LABEL", "Close (stock button test)")
+   DisplayLabel="StockCloseLabel"
+End Object
+

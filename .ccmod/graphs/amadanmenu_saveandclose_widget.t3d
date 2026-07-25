@@ -1,0 +1,13 @@
+Begin Object Class=/Script/UMG.Button Name="SaveAndCloseButton" ExportPath="/Script/UMG.Button'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveAndCloseButton'"
+   Begin Object Class=/Script/UMG.ButtonSlot Name="SaveAndCloseButtonSlot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveAndCloseButton.SaveAndCloseButtonSlot_0'"
+   End Object
+   Begin Object Name="SaveAndCloseButtonSlot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.SaveAndCloseButton.SaveAndCloseButtonSlot_0'"
+      Parent="/Script/UMG.Button'SaveAndCloseButton'"
+      Content="/Script/UMG.TextBlock'TextBlock_185'"
+   End Object
+   Slots(0)="/Script/UMG.ButtonSlot'SaveAndCloseButtonSlot_0'"
+   bExpandedInDesigner=True
+End Object
+Begin Object Class=/Script/UMG.TextBlock Name="TextBlock_185" ExportPath="/Script/UMG.TextBlock'/Game/Mods/Menu/W_AmadanMenu.W_AmadanMenu:WidgetTree.TextBlock_185'"
+   Text=NSLOCTEXT("UMG", "TextBlockDefaultValue", "Save and Close")
+End Object
