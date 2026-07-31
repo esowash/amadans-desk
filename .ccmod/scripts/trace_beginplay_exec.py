@@ -6,11 +6,13 @@ vs a dead leftover never reached from the real event.
 """
 import sys
 
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod.t3d import parse
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 SRC_GRAPH = MOD + r"\.ccmod\graphs\stocker_modcontroller_probe_a_live.t3d"
 
 g = parse(open(SRC_GRAPH, encoding="utf-8-sig").read())

@@ -29,11 +29,13 @@ SetIgnoreMoveInput -> SetIgnoreLookInput -> Print(done).
 """
 import sys
 
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod.t3d import parse
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 SRC = MOD + r"\.ccmod\graphs\amadan_interact_gameandui.t3d"
 OUT = MOD + r"\.ccmod\graphs\amadan_interact_uionly.t3d"
 

@@ -1,7 +1,7 @@
 # Roadmap: post-MVP
 
-**Written 2026-07-30 (a planning machine, planning session — no DevKit on this machine, so this is
-design and sequencing only, nothing built).**
+**Written 2026-07-30 (planning session on a machine without the DevKit, so this is design
+and sequencing only, nothing built).**
 
 The MVP shipped and was submitted to the modding contest. The sweep engine, house-rules
 UI, notebook/Feat unlock, and persistence are all live and playtest-confirmed. This doc
@@ -168,10 +168,10 @@ in this repo documents, and ccmod's own `reference/authoring-workflow.md` does n
 
 These are tool-level facts any future Conan mod would need. Backport them.
 
-## Cross-cutting: keep memory current
+## Cross-cutting: keep the session record current
 
-The project's persistent notes holds nothing on this project after 2026-07-13. Sessions 15–21, the contest
-submission, the entire Amadan bug, and this roadmap were all invisible to it. A session
-starting cold from memory alone gets a two-week-stale picture and will make wrong statements
-about project state — this has already happened once. **Store a state anchor at the end of
-each working session**, not just at milestones.
+The project's persistent notes hold nothing after 2026-07-13. Sessions 15–21, the contest
+submission, the entire Amadan bug, and this roadmap were all missing from them. A session
+starting cold from those notes alone gets a two-week-stale picture and will make wrong
+statements about project state — this has already happened once. **Write a state summary at
+the end of each working session**, not just at milestones.

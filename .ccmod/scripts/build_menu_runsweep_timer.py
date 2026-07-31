@@ -17,13 +17,15 @@ planned "sweep frequency, in minutes" text field exists to drive it.
 """
 import sys
 
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod.t3d import parse, connect, connect_exec
 from ccmod.t3d.generator import instantiate
 from ccmod.t3d.model import Graph
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 STOCKER_GRAPH = MOD + r"\.ccmod\graphs\stocker_modcontroller_probe_a_live.t3d"
 SELF_GRAPH = MOD + r"\.ccmod\graphs\testpanel_review.t3d"
 TIMER_GRAPH = MOD + r"\.ccmod\graphs\settimer_byfunctionname_real.t3d"

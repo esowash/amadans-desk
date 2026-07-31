@@ -19,13 +19,15 @@ line: BeginPlay -> Delay -> GAC(station) -> GAC(chest) -> Print begin ->
 Print src -> MoveItemsByTemplateId -> Print result.
 """
 import sys, copy
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod.t3d import parse, connect, connect_exec
 from ccmod.t3d.generator import instantiate
 from ccmod.t3d.model import Graph
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 STA = "/Game/Systems/Building/Placeables/BP_PL_CraftingStation_Metal.BP_PL_CraftingStation_Metal_C"
 LRG = "/Game/Systems/Building/Placeables/BP_PL_Chest_Large.BP_PL_Chest_Large_C"
 TEMPLATE_ID = "11501"   # Iron Bar

@@ -19,13 +19,15 @@ AsyncAction_0's SpawnedPawn/TargetLayout/NPCBehaviorParameters instead of BP_Thr
 import sys
 import copy
 
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod.t3d import parse, connect
 from ccmod.t3d.generator import instantiate
 from ccmod.t3d.model import Graph
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 
 
 def pin(n, name, output=None):

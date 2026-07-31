@@ -17,11 +17,13 @@ knot's InputPin so it carries only ite_template.then.
 """
 import sys
 
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod.t3d import parse, connect, connect_exec
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 SRC = MOD + r"\.ccmod\graphs\menu_addkeeprule_final_check.t3d"
 
 g = parse(open(SRC, encoding="utf-8-sig").read())

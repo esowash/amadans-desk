@@ -13,14 +13,16 @@ save (~160 units from Amadan's own hardcoded spot), from stocker-amadan-npc memo
 """
 import sys
 
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod.t3d import parse, connect, connect_exec
 from ccmod.t3d.generator import instantiate
 from ccmod.t3d.model import Graph
 import copy
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 
 # Confirmed by the user: Save-As clone of BP_interactable_teachmultipleemotes, named BP_AmadanNotebook,
 # saved into Menu/Local, compiled clean.

@@ -13,15 +13,18 @@ same discipline as always).
 """
 import sys
 
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod import db
 from ccmod.t3d import parse, connect_exec
 from ccmod.t3d.generator import instantiate
 from ccmod.workspace import Workspace
 
-MOD = r"<MOD_ROOT>"
-CCMOD = r"<CCMOD_HOME>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 LIB = CCMOD + r"\library"
 
 ws = Workspace.resolve()

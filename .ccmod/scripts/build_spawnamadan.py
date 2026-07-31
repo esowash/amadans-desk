@@ -15,14 +15,16 @@ All pieces below are cloned from REAL captures, not hand-typed guesses:
 """
 import sys
 
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod.t3d import parse, connect, connect_exec
 from ccmod.t3d.generator import instantiate
 from ccmod.t3d.model import Graph
 import copy
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 
 AMADAN_BGC = '''"/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Menu/HumanoidNPC_Character_Amadan.HumanoidNPC_Character_Amadan_C'"'''
 AMADAN_CLASS_PATH = '"/Game/Mods/Menu/HumanoidNPC_Character_Amadan.HumanoidNPC_Character_Amadan_C"'

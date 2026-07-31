@@ -22,13 +22,15 @@ STOCKER_3G prefix (no string-concat node), so read the whole ModController
 BlueprintUserMessages stream in the tick's time window, not just STOCKER_3G lines.
 """
 import sys, copy
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod.t3d import parse, connect, connect_exec
 from ccmod.t3d.generator import instantiate
 from ccmod.t3d.model import Graph
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 LIB = CCMOD + r"\library"
 BASE_CONTAINER = "/Game/Systems/Building/Placeables/BP_PlaceableItemContainer.BP_PlaceableItemContainer_C"
 # (label, templateID) in the fixed print order

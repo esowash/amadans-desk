@@ -24,13 +24,15 @@ Real captured precedent, all already on disk from this session's work:
 import copy
 import sys
 
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod.t3d import parse, connect, connect_exec
 from ccmod.t3d.generator import instantiate
 from ccmod.t3d.model import Graph
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 GRAPHS = MOD + r"\.ccmod\graphs"
 
 g = parse(open(GRAPHS + r"\modcontroller_beginplay_s19_persist.t3d", encoding="utf-8-sig").read())

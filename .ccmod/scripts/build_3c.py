@@ -8,11 +8,13 @@ Selection front-half (BeginPlay->Delay->GetAllActors->GetArrayItem->
 GetPopulatedItemCount->Greater->Branch) is preserved from 3B unchanged.
 """
 import sys, re
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod.t3d import parse, instantiate, connect, connect_exec
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 LIB = CCMOD + r"\library\inventory"
 TEMPLATE_ID = "12515"   # held by owner 59 (the fuller chest -> source)
 

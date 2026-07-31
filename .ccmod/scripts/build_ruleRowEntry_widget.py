@@ -63,7 +63,8 @@ root = container(
 blocks = [root, rule_text, delete_btn, delete_text]
 out = "\n".join(blocks) + "\n"
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 path = MOD + r"\.ccmod\graphs\ruleRowEntry_widget.t3d"
 open(path, "w", encoding="utf-8").write(out)
 print(f"wrote: {path}")

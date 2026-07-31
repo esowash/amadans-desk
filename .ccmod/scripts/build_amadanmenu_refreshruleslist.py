@@ -43,7 +43,8 @@ another hand-add round-trip. Proofread via pull before trusting a compile.
 import copy
 import sys
 
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod import db
 from ccmod.t3d import parse, connect, connect_exec
@@ -51,7 +52,8 @@ from ccmod.t3d.generator import instantiate
 from ccmod.t3d.model import Graph
 from ccmod.workspace import Workspace
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 LIB = CCMOD + r"\library"
 CONSTRUCT_SRC = MOD + r"\.ccmod\graphs\amadanmenu_construct_v2_full.t3d"
 EVENTGRAPH_SRC = MOD + r"\.ccmod\graphs\menu_w_amadanmenu_eventgraph.t3d"

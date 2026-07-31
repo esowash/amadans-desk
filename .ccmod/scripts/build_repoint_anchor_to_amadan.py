@@ -23,11 +23,13 @@ Stygian-specific assumptions -- confirmed by tracing pin links, not assumed.
 """
 import sys
 
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod.t3d import parse
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 
 BASE = MOD + r"\.ccmod\graphs\modcontroller_widget_removed_compact.t3d"
 g = parse(open(BASE, encoding="utf-8").read())

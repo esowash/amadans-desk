@@ -11,7 +11,8 @@ per the user's standing feedback (route every entry hand-wire through a knot).
 import sys
 import copy
 
-CCMOD = r"<CCMOD_HOME>"
+import os, pathlib
+CCMOD = os.environ.get("CCMOD_HOME") or str(pathlib.Path(__file__).resolve().parents[3] / "claude-conan-modder")
 sys.path.insert(0, CCMOD)
 from ccmod import db
 from ccmod.t3d import parse, connect_exec
@@ -19,7 +20,8 @@ from ccmod.t3d.generator import instantiate
 from ccmod.t3d.model import Graph
 from ccmod.workspace import Workspace
 
-MOD = r"<MOD_ROOT>"
+import pathlib
+MOD = str(pathlib.Path(__file__).resolve().parents[2])
 
 ws = Workspace.resolve()
 conn = db.connect(ws.cache_db)
