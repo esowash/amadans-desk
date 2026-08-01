@@ -130,6 +130,67 @@ Consequences for anyone building on this:
   camp-side `AddSpawnPoint` — that function belongs to `NPCTerritorySpawner`, for its
   own internal list.
 
+## `NPCTerritorySpawner` has two modes, and a non-obvious switch between them
+
+Its `BeginPlay` (pulled live, `.ccmod/graphs/npcterritoryspawner_beginplay_real_s21.t3d`):
+
+```
+if SpawnFromTriggerEvent            ──> skip
+else if (Color == NewEnumerator27)  ──> FindStaticNavigationOverride(Camp)
+                                        ──> InitializeSpawners(...)        ← camp mode
+     else                           ──> RegisterNPCTerritorySpawner        ← territory-volume mode
+EndPlay ──> UnregisterNPCTerritorySpawner + DestroyAllSpawned
+```
+
+**`Color` is not cosmetic.** It is typed `/Game/Systems/Spawning/SpawnInputs/TerritoryIdentifyColor`
+(White/Blue/Green/Red/Yellow/Cyan/Purple/Pink/Orange) and it selects the code path. Community
+tutorials present it as a labelling convention for organising camps — it isn't. If `Color` is not
+the camp value, **`Camp` is never read at all**: the spawner registers as a free territory-volume
+spawner and any manual spawn points are silently ignored.
+
+The camp value is **Yellow**, read off a real working base-game camp spawner (see reference below).
+That is an inference rather than a decoded enum mapping — the literal in the graph is
+`NewEnumerator27`, and `TerritoryIdentifyColor`'s `DisplayNameMap` ordering is not recoverable from
+the raw asset — but a strong one: `Camp` is only ever read down that branch, and that camp works.
+
+`Camp` itself is a plain object reference to a `BP_CampOwner`, shown in the Details panel under a
+category literally named **"Static Navigation Override"**. That name is the missing link in the
+whole chain: `BP_CampComponent` implements `StaticNavigationProviderInterface`, which is the
+interface `GetSpawnPoints` belongs to. So:
+
+```
+spawner.Camp ──> BP_CampOwner ──> BP_CampComponent (implements StaticNavigationProviderInterface)
+             ──> GetSpawnPoints() ──> CachedSpawnPoints ──> built from CampActors
+```
+
+## Reference camp for diffing configuration
+
+`Content/Maps/ConanSandbox/Gameplay/Camps_NPC/` ships **202 camp sublevels**.
+`Camps_NPC_x4_y3.umap` is a small complete one — camp `The_Black_Hand_Camp_092`, with actors
+`BP_CampOwner46_32` and `NPCTerritorySpawner41_57`. Opening that sublevel directly loads only that
+tile, not the full world-composition map.
+
+Its spawner's real configured values, for mirroring:
+
+| Property | Value |
+|---|---|
+| `Color` | **Yellow** |
+| `Camp` | `BP_CampOwner46` |
+| `NPCs` / `Human NPCs` | **both empty** — the spawner carries no NPC entries; spawn tables live on the spawn points |
+| `Roam Radius` | 5000.0 |
+| `Spawn Underneath Roof` | true |
+| `Spawn from Trigger Event` / `Ignore Land Claim` | false |
+| `Territory Super Region` / `Sub Region` | Desert / 5 |
+
+It also exposes editor-callable buttons: `UpdateSpawnVolumeForManualSpawnPoints`,
+`Release Nav Build Lock`, `Visualize Static Navigation`. The first implies a real `SpawnVolume`
+(`BoxComponent`) that is sized at edit time to cover the manual spawn points — relevant to any
+runtime build, where nothing performs that step. `GetNextSpawnLocation` does use box extents
+(`GetScaledBoxExtent` / `RandomPointInBoundingBox`), and there is also a
+`TerritorySpawnVolume` / `TerritorySpawnVolumeRadius`. How much of this gates *camp* mode
+specifically was not traced; co-locating the spawner with the spawn point and giving the volume a
+generous extent sidesteps the question.
+
 ## `BP_ManualSpawnPoint`'s real configuration surface
 
 - `SpawnTable` — a free text/name field matching a `WeightedSpawnTableRow` row's
@@ -143,6 +204,29 @@ Consequences for anyone building on this:
 - `AllowRespawn`, `DespawnTime`, `DayNightSpawning`, `AIDataTableEntryOverride`,
   `NPCBehavior`.
 
+## Building this at runtime
+
+`BP_CampComponent::BeginPlay` resolves the camp system via
+`GetAllActorsOfClass(/Script/ConanSandbox.ConanWorldSettings)` → its `BP_CampSystemComponent` →
+`RegisterCamp(self)`. **`ConanWorldSettings` is part of the level and always present**, so a
+runtime-spawned camp does find the camp system and register; the "exhaust retries and destroy your
+own camp actors" failure branch is not a risk for runtime spawning.
+
+Spawn order matters, because the spawn-point cache is build-once-then-frozen:
+
+```
+1. camp owner        (subclass it — GetAllActorsOfClass(BP_CampOwner) would otherwise
+                      collide with the 202 base-game camps sharing the world)
+2. manual spawn point ──> GetComponentByClass(BP_CampComponent) ──> Array_Add into CampActors
+3. territory spawner  LAST, Color = Yellow, and Camp set in its own BeginPlay
+                      *before* Parent: BeginPlay (the parent reads Camp immediately)
+```
+
+Setting `Camp` from inside a subclass's own `BeginPlay` also avoids depending on the property being
+externally writable. `CampActors` is Instance Editable (the Details panel offers an eyedropper for
+it), but whether it accepts a write from an unrelated Blueprint is a separate flag and is not
+established here.
+
 ## Why this matters for the Amadan bug
 
 Sessions 19–21 hand-rebuilt `NPCTerritorySpawner`'s internals inside
@@ -154,6 +238,13 @@ table.
 This system is what those calls were routing around. Building it properly — camp owner,
 spawn point registered into `CampActors`, territory spawner registered via the camp
 interface — spawns the NPC through the same path every base-game NPC uses.
+
+It also explains the session-21 native-spawner attempt, which was abandoned as "stalled on native
+C++" after `Amadan_ManualSpawnPoint` and `Amadan_TerritorySpawner` were spawned at runtime and
+produced nothing. Two independent reasons, both now understood: there was no `BP_CampOwner` at all
+(so no spawn points were ever registered anywhere), and the spawner's `Color` was left at its
+default, which routes `BeginPlay` down `RegisterNPCTerritorySpawner` where `Camp` is never read.
+Right actors, wrong mode, missing a third of the system.
 
 One caution against over-reading the evidence: the low-level call's
 `TerritoryVolumeSpawner` parameter, which the hand-built version never supplied, is
