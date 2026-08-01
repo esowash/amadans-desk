@@ -1,6 +1,30 @@
-# Open bug: Amadan doesn't render
+# ~~Open bug: Amadan doesn't render~~ — SOLVED 2026-08-01 (session 22)
 
-This is the one real blocker left before the mod is fully "done." Help welcome.
+> **Resolved.** Amadan renders: correct body mesh, correct clothing, correct weapon, and he
+> registers as a real character. The cause was architectural, not a configuration mistake — every
+> earlier attempt spawned the character directly and bypassed Conan's camp/territory-spawner system
+> entirely. See **[`CAMP-SPAWNER-SYSTEM.md`](CAMP-SPAWNER-SYSTEM.md)** for the real mechanism and
+> the runtime build.
+>
+> The decisive confirmation, after four sessions of it never once appearing: paired
+> `SK_human_male_underwear` / `SK_human_male_hair_01` clothing-assembly lines in the log, plus
+> **zero** hits for any of the old failure signatures (`No animation instance found`,
+> `does not have a valid UID`, `StartEmoteInternal`). He now also turns up in ordinary
+> `KillCharacterWithRagdoll` lines — i.e. a real, registered character rather than a ghost actor.
+>
+> Checkpoints from the working run:
+> ```
+> MENU_CAMP: SpawnAmadan entry, existing camp owners:  0
+> MENU_CAMP: registered spawn point, CampActors now:   1
+> MENU_CAMP: spawner BeginPlay, camp owners found:     1
+> ```
+>
+> **Still open, both cosmetic and both understood** — see "Remaining cosmetic gaps" at the end.
+>
+> The rest of this document is kept as-is: it is the record of what was tried and ruled out, and
+> the reasoning that eventually pointed at the camp system. It is no longer a help request.
+
+This was the one real blocker left before the mod is fully "done."
 
 ## What Amadan is supposed to be
 
@@ -128,3 +152,45 @@ Dye channels (candidate, not confirmed final): Helmet ch1=100; UpperBody ch1=117
 These are already baked into the `AmadanRace`/`AmadanEquipment` DataTable rows in
 `Mods/Menu/Local/`; they're listed here mainly for anyone pursuing lead #2 above, which
 needs them supplied directly rather than resolved through the DataTable pipeline.
+
+---
+
+## Remaining cosmetic gaps (session 22)
+
+Neither blocks the mod; both are understood rather than mysterious.
+
+### Dyes don't apply
+
+**Not a bug — structurally impossible through the mechanism being used.**
+`EquipmentTemplateDataTable` has exactly nine fields: `MainHand`, `OffHand`, `Helmet`, `Torso`,
+`Legs`, `Hands`, `Feet`, `Backpack`, `Durability`. There is no dye, colour, tint, or channel field
+of any kind (verified against the real asset, not assumed). An equipment template can say *which*
+items an NPC wears, never what colour they are.
+
+The dye-channel values recorded earlier in this document came from a reference thrall's **item
+instances in the save DB**, which is per-instance data, not template data. Applying them would mean
+dyeing the spawned items at runtime — real work, and it would have to re-apply on every respawn.
+
+Options: ship undyed; or choose template IDs whose base colours already read the way you want.
+
+### He doesn't play his idle emote
+
+The pose is meant to come from the spawn point, not from the character class. `BP_ManualSpawnPoint`
+exposes an `EmoteState` (`ECharacterEmotes`) field, and `GetEmoteState` has exactly one consumer in
+the whole content tree — `BaseNPC` — so it is read by the NPC base class directly, independent of
+the Behavior Tree. That matters because Amadan's `SpawnDataTable` row deliberately uses
+`BT_DoNothing`; the separate random-idle path (`BTTaskIdleEmote` → `GetIdleEmoteToPlay`) is
+therefore dead for him, and the two mechanisms do not collide.
+
+Cause: `EmoteState` and `IsGuardSpot` were simply never set on `Amadan_ManualSpawnPoint`. Confirmed
+by inspecting its `.uasset` — the `SpawnTable` property is serialized there, those two are absent,
+and only *overridden* properties get written into a subclass's defaults.
+
+Fix is Class Defaults only, no graph work: `EmoteState` = "Sleep on back" (the display name for
+`SleepOnGround`), `IsGuardSpot` = true. If that proves insufficient, the next suspect is
+`BT_DoNothing` being too inert for `BaseNPC` to reach the emote call, with `BT_Passive` as the
+sibling to try.
+
+This also retires the old `BeginPlay → StartEmote` hook on `HumanoidNPC_Character_Amadan`, which
+was the source of the `UEmoteController::StartEmoteInternal - No animation instance found` error
+chased across sessions 20 and 21. The spawn point's own field is the supported route.
