@@ -19,18 +19,33 @@ playtest-confirmed working.** You can enroll benches, set/edit/delete keep rules
 (including "keep all"), search items by name with live type-ahead, and the whole rule
 set survives a server restart.
 
-**Amadan himself — the NPC standing by the Desk — does not work yet, and this is the
-main thing we'd love help with.** He's meant to be a fixed, decorative NPC (not
-capturable, no AI, just standing there for flavor and to gatekeep the Desk narratively),
-async-spawned from `Menu_ModController`'s `BeginPlay`/`RunSweep`. He currently fails to
-render at all — invisible, no nameplate, no working animation instance — despite
-spawning successfully and being a real, named, registered character by every check we've
-tried. **See [`docs/AMADAN-BUG.md`](docs/AMADAN-BUG.md) for the full writeup**: exactly
-what's been tried, what the real native error messages say, and where the investigation
-currently stands. The relevant Blueprint logic (`SpawnAmadan`) was removed from this
-build so the rest of the mod ships clean — if you want to pick up the appearance bug,
-you're starting from a blank page on that one function specifically, informed by
-everything in that doc.
+**Amadan himself now works too, as of 2026-08-01.** He was the long-standing open bug on
+this repo — a fixed, decorative NPC who spawned successfully but never rendered:
+invisible, no nameplate, no animation instance, despite being a real registered character
+by every check available. He now renders with the correct body, clothing and weapon, holds
+his idle pose, and registers properly in the world.
+
+The cause was architectural rather than a misconfiguration, which is why it survived so
+many attempts: **Conan doesn't spawn world NPCs by calling a spawn function on an actor.**
+It uses a three-actor system — a camp owner, a manual spawn point, and a territory spawner
+— wired together by array membership, and every earlier attempt bypassed it and called the
+underlying spawn pipeline directly. Standing that system up at runtime fixed it on the
+first playtest.
+
+Two things made it findable, and both are written up here in case they help anyone else
+working against this DevKit:
+
+- **[`docs/CAMP-SPAWNER-SYSTEM.md`](docs/CAMP-SPAWNER-SYSTEM.md)** — the camp/NPC-spawner
+  system traced end to end from real base-game graphs, including the spawn-point cache and
+  its ordering constraint, and the non-obvious detail that a territory spawner's `Color`
+  property *selects a code path* rather than being a cosmetic label.
+- **[`docs/AMADAN-BUG.md`](docs/AMADAN-BUG.md)** — kept as the record of what was tried and
+  ruled out over four sessions. It's no longer a help request, but the reasoning is what
+  eventually pointed at the camp system.
+
+Remaining known gap: dyes on his gear don't apply, because `EquipmentTemplateDataTable`
+has no dye/colour field at all — an equipment template can say *which* items an NPC wears,
+never what colour they are.
 
 ## Repo layout
 
@@ -50,8 +65,12 @@ everything in that doc.
 - [`docs/TECHNICAL-NOTES.md`](docs/TECHNICAL-NOTES.md) — how the Blueprint graphs in
   `.ccmod/` were actually built (the clipboard/T3D authoring method), useful context for
   reading or extending anything in `.ccmod/graphs`.
-- [`docs/AMADAN-BUG.md`](docs/AMADAN-BUG.md) — the open NPC-spawn/appearance bug, written
-  up in detail for anyone who wants to take a swing at it.
+- [`docs/CAMP-SPAWNER-SYSTEM.md`](docs/CAMP-SPAWNER-SYSTEM.md) — how Conan actually spawns
+  world NPCs (the camp / manual spawn point / territory spawner trio), traced from real
+  base-game graphs. Read this before touching NPC spawning in a Conan mod.
+- [`docs/AMADAN-BUG.md`](docs/AMADAN-BUG.md) — the NPC-spawn/appearance bug, now solved.
+  Kept as a record of what was tried and ruled out.
+- [`docs/ROADMAP.md`](docs/ROADMAP.md) — what shipped, and what's queued next.
 
 ## License / use
 
