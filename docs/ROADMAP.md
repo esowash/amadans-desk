@@ -175,3 +175,63 @@ submission, the entire Amadan bug, and this roadmap were all missing from them. 
 starting cold from those notes alone gets a two-week-stale picture and will make wrong
 statements about project state — this has already happened once. **Write a state summary at
 the end of each working session**, not just at milestones.
+
+---
+
+# Update 2026-08-01 (session 22): everything above is now done
+
+Sessions 15–18 shipped as **v0.1.2** (per-Desk state, exclusive placement radius, delete-button
+fix). Sessions 19+ — the Amadan render bug — is **solved**: he renders with correct mesh, clothing
+and weapon, registers as a real character, and plays his idle emote. The cause was architectural,
+not configuration: every earlier attempt bypassed Conan's camp/territory-spawner system. See
+[`CAMP-SPAWNER-SYSTEM.md`](CAMP-SPAWNER-SYSTEM.md) and [`AMADAN-BUG.md`](AMADAN-BUG.md).
+
+The roadmap's own advice to try the cheap reparent diagnostic first turned out to be beside the
+point — no amount of tuning the character class would have helped, because the character was never
+the problem. Worth remembering as a bias check: when a native pipeline silently doesn't fire and
+every parameter checks out, look for the surrounding system it is meant to be part of before
+adding more configuration to the call itself.
+
+## Next queue (user's list)
+
+1. **On/off switch for each Desk**
+2. **Configurable sweep timer**
+3. **Configurable sweep range**
+4. **Menu aesthetic — more immersive, plus the handwriting font**
+
+### Suggested order, and why
+
+**(3) then (1) first — they are the same job twice.** Both are a `SaveGame` variable on
+`BP_PL_Table_Strategy_Amadan` plus a control in `W_AmadanMenu`. Per-Desk state and persistence are
+already solved, and the UI already scopes to the active Desk. Sweep range is the cheapest thing on
+this list: `RunSweep` already takes `Range` as a plain float read fresh every tick, so it needs a
+variable and a number field, nothing structural.
+
+*Constraint worth stating before anyone asks:* the **exclusion** radius (blocking placement of two
+Desks near each other) is **not** adjustable the same way. It is evaluated once, at placement time,
+by the native `CanBePlaced` check reading the placing actor's own `ExclusivePlacementSphere`.
+Making that player-configurable means leaving the native system for something custom. The
+inclusion/sweep range has no such limitation.
+
+**(2) next — it is more work than it looks.** The interval itself is trivial; the problem is
+re-arming. The 300s timer is set in `Menu_ModController::BeginPlay` via `ForEachLoop` →
+`SetTimer(Object=each Desk)`, and the handles are not stored anywhere. Changing an interval at
+runtime needs `K2_ClearAndInvalidateTimerHandle` on that Desk's existing handle before setting a new
+one, so the handle has to become per-Desk state first. That refactor is the actual task.
+
+*Do not remove the 1-second `Delay` before the `GetAllActorsOfClass` in that BeginPlay chain.* It is
+load-bearing — without it the fetch runs before the Desk actors have registered and the ForEach
+silently iterates zero times, with no error. That bug has already been found and fixed once.
+
+**(4) last, and split it.** The immersive-aesthetic pass is open-ended design work. The handwriting
+font is a separate, concrete sub-task with a known trap:
+
+- The font rendered **nothing** when applied. The glyph data is fine (valid sfnt header, embedded in
+  the `FontFace`, `EFontCacheType::Runtime` correct). The untested prime suspect is the composite
+  `Font` asset's `DefaultTypeface` not actually pointing at the `FontFace`. Preview the font in its
+  own asset editor before wiring it into any widget.
+- **Copy the `.ttf` somewhere neutral inside the DevKit tree before importing.** A `FontFace` bakes
+  its import path into the cooked pak — the first attempt shipped a personal `Users/<name>/OneDrive/`
+  path into the public Workshop artifact. Related: anything under `Mods/<Mod>/Local/` cooks whether
+  or not it is referenced, so unused assets are dead weight in every build.
+- The font belongs to `W_RuleRowEntry`, not `W_AmadanMenu` — the latter carries no font reference.
