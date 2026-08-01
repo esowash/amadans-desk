@@ -8,9 +8,12 @@ A fixed, decorative, non-capturable NPC standing beside Amadan's Desk. No AI, no
 movement, no combat — a `BeginPlay`-forced `SleepOnGround` idle pose is the intended
 final state. He's spawned once at server start (`Menu_ModController::BeginPlay`) and
 periodically re-checked/respawned by the sweep timer if killed
-(`Menu_ModController::RunSweep`), both via a `SpawnAmadan` function/event that has since
-been **removed from this build** so the rest of the mod ships clean. Rebuilding
-`SpawnAmadan` is the actual task.
+(`Menu_ModController::RunSweep`), both via a `SpawnAmadan` function/event.
+
+*(Correction, session 22: an earlier revision of this doc said `SpawnAmadan` had been
+removed from the build. It hadn't — a live pull found the event still present, and it is
+currently wired into `Menu_ModController::BeginPlay` in the simple
+`SpawnActorFromClass` + `SetCharacterSpawnTableID` form.)*
 
 His class (`HumanoidNPC_Character_Amadan`, plain `HumanoidNPCCharacter` subclass) and
 his `SpawnDataTable`/`RaceTemplateDataTable`/`EquipmentTemplateDataTable` rows (all
@@ -69,6 +72,20 @@ symptom above**:
    consistent with (but doesn't fully explain) everything above.
 
 ## Real leads not yet tried
+
+0. **★ Strongest current lead (session 22): spawn him through the real camp/territory
+   spawner system instead of calling the spawn pipeline directly.** Every attempt above
+   hand-rebuilt `NPCTerritorySpawner`'s internals inside `Menu_ModController`, with no
+   camp, no spawn point, and no territory spawner. Conan spawns world NPCs through a
+   **three-actor system** — `BP_CampOwner` + `BP_ManualSpawnPoint` + `NPCTerritorySpawner`
+   — wired together by array membership. The full trace, including the spawn-point cache
+   lifecycle and the exact ordering constraint it imposes, is in
+   [`CAMP-SPAWNER-SYSTEM.md`](CAMP-SPAWNER-SYSTEM.md); the raw graph pulls backing it are
+   in `.ccmod/graphs/campcomp_*_s22.t3d`. Because the connection is plain array
+   membership and contains no editor-only registration, this can be built at runtime
+   without shipping any map-placed actors. A first attempt at the spawner classes in
+   session 21 failed for a now-understood reason: there was no `BP_CampOwner` at all, and
+   nothing was ever registered into a camp.
 
 1. **`BP_ThrallCage`'s `ConvertToThrall` self-call** — a bare, zero-parameter self-context
    call, skipped in every attempt above on the assumption it's specific to thrall-capture

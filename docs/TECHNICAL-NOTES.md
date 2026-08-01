@@ -67,6 +67,25 @@ End Object
   reference stale even after the node's `Name=` is correctly updated, producing two
   distinct nodes with colliding `ExportPath`s that Unreal may silently mis-import.
 
+## Reading base-game systems, not just writing graphs
+
+The same clipboard mechanism works in reverse, and it is the most reliable way to
+understand an unfamiliar base-game system: open the real asset, select the graph,
+`Ctrl+C`, `ccmod pull --save <name>`, then parse the T3D. Exec flow and data flow are
+both fully recoverable, which raw `.uasset` text extraction cannot give you — identifier
+dumps tell you *what names exist*, never *what connects to what* or *in what order*.
+Several wrong conclusions in this project came from inferring structure by grep
+adjacency; a graph pull settles it.
+
+[`CAMP-SPAWNER-SYSTEM.md`](CAMP-SPAWNER-SYSTEM.md) is a worked example — the base game's
+camp/NPC-spawner system traced end to end this way, with the raw pulls kept in
+`.ccmod/graphs/campcomp_*_s22.t3d`.
+
+Note also that `grep`-style identifier extraction over a `.uasset` **cannot count
+references**: the format stores each distinct string once and refers to it by index, so
+a name appearing "once" in the file may be referenced by many nodes. Use it to establish
+that something exists, never to establish how often it is used.
+
 ## Verifying results (not covered here in depth)
 
 Build → deploy the cooked `.pak` → launch → check `LogBlueprintUserMessages` in the
